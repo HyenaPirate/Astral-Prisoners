@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1738750930}
   tilemap: {fileID: 1130539301}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &82455267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -389,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa35421889da0c348b829bee73f24301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
 --- !u!212 &215005480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1625,10 +1627,10 @@ Tilemap:
   - first: {x: 3, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
+      m_TileIndex: 3
       m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 3
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
@@ -2476,10 +2478,12 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 31
     m_Data: {fileID: 11400000, guid: 32466e4adc57cb844806ccca222e066f, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 11400000, guid: 7617d5cabe199b8498c74deabf4c5a50, type: 2}
   - m_RefCount: 99
     m_Data: {fileID: 11400000, guid: c341ebd0d02549349aaf37bd0f287dcc, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 496a12600ef446f44926abb9752c0f83, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 160
     m_Data: {fileID: 7482667652216324306, guid: 2d4846a8ff378a14b8f1cb6ad7760283, type: 3}
@@ -2505,10 +2509,12 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 31
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {r: 0.12878752, g: 1, b: 0, a: 1}
   - m_RefCount: 99
     m_Data: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0, g: 0.7911868, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2805,6 +2811,10 @@ MonoBehaviour:
   grid: {fileID: 1738750930}
   tilemap: {fileID: 1130539301}
   exit: {fileID: 215005479}
+  aktywnaPostac: 0
+  postac1: {fileID: 0}
+  postac2: {fileID: 0}
+  postac3: {fileID: 0}
 --- !u!4 &1376278311
 Transform:
   m_ObjectHideFlags: 0
@@ -2901,6 +2911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738750931}
   - component: {fileID: 1738750930}
+  - component: {fileID: 1738750932}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -2935,6 +2946,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738750932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738750929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623acad6f8ed68b4c80a2a52d9805652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1130539301}
+  gracze: []
+  menu: {fileID: 3137183773061675843}
 --- !u!1 &1873575991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1738750930}
   tilemap: {fileID: 1130539301}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &1873575996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3241,6 +3268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1738750930}
   tilemap: {fileID: 1130539301}
+  pos: {x: 0, y: 0, z: 0}
 --- !u!212 &2126511403
 SpriteRenderer:
   m_ObjectHideFlags: 0
