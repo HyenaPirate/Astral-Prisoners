@@ -22,7 +22,7 @@ public class Win : MonoBehaviour
         gracze = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < gracze.Length; i++)
         {
-            if (tilemap.GetTile(gracze[i].GetComponent<Where>().Pole(0, 0)).name == "Wygrana") //sprawdza czy ktorys z graczy stoi na polu "Wygrana"
+            if (tilemap.GetTile(gracze[i].GetComponent<Where>().Pole(0, 0)).name == "Podloga_Wygrana") //sprawdza czy ktorys z graczy stoi na polu "Wygrana"
             {
                 Destroy(gracze[i]); //gracz jest usuwany
                  ile_graczy--;

@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class Activate : MonoBehaviour
 {
-    public GameObject indentyfikator;
-    bool activePlayer;
+    bool isActive;
     GameObject[] gracze;
-    public bool GetActivePlayer() // Geter, upewniam si� �e nikt nie zmieni tej zmiennej gdy nie trzeba
+    public bool IsActive() // Geter, upewniam sie ze nikt nie zmieni tej zmiennej gdy nie trzeba
     {
-        return activePlayer;
+        return isActive;
     }
-    void Start() //Dezaktywuje graczy na pocz�tku
+    public static GameObject GetActivePlayer() //Zwraca aktywnego gracza
     {
-        activePlayer = false;
+        Activate[] players  = FindObjectsOfType<Activate>();
+        for (int i=0; i<players.Length; i++)
+        {
+            if (players[i].isActive) return players[i].gameObject; 
+        }
+        return null; //lub NULL jeżeli nikt nie jest aktywny
+    }
+    void Start() //Dezaktywuje graczy na poczatku
+    {
+        isActive = false;
     }
     void OnMouseDown()
     {
@@ -22,16 +30,10 @@ public class Activate : MonoBehaviour
             gracze = GameObject.FindGameObjectsWithTag("Player");
             for (int i=0; i<gracze.Length; i++)
             {
-                gracze[i].GetComponent<Activate>().Start(); //wszyscy gracze staj� si� nieaktywni, bo metoda start dezaktywuje graczy
+                gracze[i].GetComponent<Activate>().Start(); //wszyscy gracze staja sie nieaktywni, bo metoda start dezaktywuje graczy
             }
-            activePlayer = true; //ten gracz staje si� aktywny
+            isActive = true; //ten gracz staje sie aktywny
             FindObjectOfType<AudioManager>().Play("Wybor");
         }
     }
-    private void Update()
-    {
-        indentyfikator.SetActive(activePlayer); //je�eli dany gracz jest aktywny to wy�wietla ten kwadracik
-    }
-
-
 }
