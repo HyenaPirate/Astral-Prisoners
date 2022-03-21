@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) ) //gdy gracz jest aktywny i wcisnie "w"
             {
-                if (tilemap.GetTile(player.GetComponent<Where>().Pole(0, 1)).name.Substring(0,7) == "Podloga")
+                if (tilemap.GetTile(player.GetComponent<Where>().Pole(0, 1)).name.Substring(0,3) == "Pdl")
                 {
                     player.transform.position = player.GetComponent<Where>().Pole(0, 1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                if (tilemap.GetTile(player.GetComponent<Where>().Pole(0, -1)).name.Substring(0, 7) == "Podloga")
+                if (tilemap.GetTile(player.GetComponent<Where>().Pole(0, -1)).name.Substring(0, 3) == "Pdl")
                 {
                     player.transform.position = player.GetComponent<Where>().Pole(0, -1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
-                if (tilemap.GetTile(player.GetComponent<Where>().Pole(-1, 0)).name.Substring(0, 7) == "Podloga")
+                if (tilemap.GetTile(player.GetComponent<Where>().Pole(-1, 0)).name.Substring(0, 3) == "Pdl")
                 {
                     player.transform.position = player.GetComponent<Where>().Pole(-1, 0) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                if (tilemap.GetTile(player.GetComponent<Where>().Pole(1, 0)).name.Substring(0, 7) == "Podloga")
+                if (tilemap.GetTile(player.GetComponent<Where>().Pole(1, 0)).name.Substring(0, 3) == "Pdl")
                 {
                     player.transform.position = player.GetComponent<Where>().Pole(1, 0) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");

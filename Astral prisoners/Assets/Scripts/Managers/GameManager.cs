@@ -24,5 +24,10 @@ public class GameManager : MonoBehaviour
         {
             aktywnosc.SetActive(false);
         }
+
+        if (Input.GetKeyDown(KeyCode.R) && gameIsPaused == false)
+        {
+            FindObjectOfType<MenuInterface>().ReloadScene();
+        }
     }
 }

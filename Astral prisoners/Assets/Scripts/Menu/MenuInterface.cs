@@ -23,6 +23,12 @@ public class MenuInterface : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
+
     public void QuitGame()
     {
 	  //saveManager.Save();
