@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a2aa2114cc89b4893f85513a8d6c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indentyfikator: {fileID: 1318077328}
 --- !u!114 &82455271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,13 +2803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsPaused: 0
-  grid: {fileID: 1738750930}
-  tilemap: {fileID: 1130539301}
-  exit: {fileID: 215005479}
-  aktywnaPostac: 0
-  postac1: {fileID: 2126511402}
-  postac2: {fileID: 82455266}
-  postac3: {fileID: 1873575995}
+  aktywnosc: {fileID: 0}
 --- !u!4 &1376278311
 Transform:
   m_ObjectHideFlags: 0
@@ -3014,7 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a2aa2114cc89b4893f85513a8d6c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indentyfikator: {fileID: 60655086}
 --- !u!114 &1873575995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3353,7 +3345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a2aa2114cc89b4893f85513a8d6c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indentyfikator: {fileID: 606684820}
 --- !u!114 &2126511407
 MonoBehaviour:
   m_ObjectHideFlags: 0
