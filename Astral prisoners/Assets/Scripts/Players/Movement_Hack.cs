@@ -19,10 +19,8 @@ public class Movement_Hack : MonoBehaviour
             {
                 for(int i = 0; i < hackable.Length; i++)
                 {
-                    Debug.Log("123");
                     if (hackable[i].transform.position == transform.position)
                     {
-                        Debug.Log("A");
                         hackable[i].GetComponent<Hackable>().Hack();
                     }
                 }

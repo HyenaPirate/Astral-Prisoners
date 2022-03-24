@@ -10,4 +10,8 @@ public class Signals : MonoBehaviour
 Zawiera tablicê sygna³ów
 Zdefiniuj jej rozmiar w unity w zale¿noœci od potrzeb poziomu
 Nastêpnie mo¿esz ustawiaæ czytaæ sygna³y z tej tablicy aby wprowadziæ interakcje sygna³ów
+
+---------------------
+Dla przyk³adu u¿ycia sprawdŸ Door i Button
+---------------------
 */
