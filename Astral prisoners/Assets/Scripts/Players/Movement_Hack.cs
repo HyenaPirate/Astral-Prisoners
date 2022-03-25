@@ -22,6 +22,8 @@ public class Movement_Hack : MonoBehaviour
                     if (hackable[i].transform.position == transform.position)
                     {
                         hackable[i].GetComponent<Hackable>().Hack();
+                        FindObjectOfType<AudioManager>().Play("Hack");
+                        FindObjectOfType<GameManager>().iloscRuchow++;
                     }
                 }
             }

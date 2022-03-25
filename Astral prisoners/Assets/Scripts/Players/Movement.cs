@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
                 {
                     transform.position = GetComponent<Where>().Pole(0, 1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
+                    FindObjectOfType<GameManager>().iloscRuchow++;
                 }
             }
             if (Input.GetKeyDown(KeyCode.S))
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour
                 {
                     transform.position = GetComponent<Where>().Pole(0, -1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
+                    FindObjectOfType<GameManager>().iloscRuchow++;
                 }
             }
             if (Input.GetKeyDown(KeyCode.A))
@@ -33,6 +35,7 @@ public class Movement : MonoBehaviour
                 {
                     transform.position = GetComponent<Where>().Pole(-1, 0) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
+                    FindObjectOfType<GameManager>().iloscRuchow++;
                 }
             }
             if (Input.GetKeyDown(KeyCode.D))
@@ -41,6 +44,7 @@ public class Movement : MonoBehaviour
                 {
                     transform.position = GetComponent<Where>().Pole(1, 0) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
+                    FindObjectOfType<GameManager>().iloscRuchow++;
                 }
             }
         }

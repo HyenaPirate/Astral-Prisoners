@@ -6,6 +6,10 @@ using UnityEngine.Audio;
 using System.IO;
 public class MenuInterface : MonoBehaviour
 {   
+    // Skrypt do zarzadzania interfacem menu, ladowaniem scen, pauzowaniem gry itp
+
+    public LevelLoader loader;
+
     void Start()
     {
         Sound_Music();
@@ -13,20 +17,27 @@ public class MenuInterface : MonoBehaviour
 
 // Scene Management -----------------------------------------
 
-    public void LoadMainMenu()
+    public void LoadLevel(int lvl)
     {
-        SceneManager.LoadScene(0);
+        if(loader == null){ SceneManager.LoadScene(lvl); Debug.Log("nie ma loadera");}
+        else{ loader.LoadLevel(lvl); Debug.Log("jest loader");}
     }
 
-    public void StartGame()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene(1);
+        LoadLevel(0);
     }
 
     public void ReloadScene()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        LoadLevel(scene);
+    }
+
+    public void NextScene()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        LoadLevel(scene + 1);
     }
 
     public void QuitGame()
@@ -36,6 +47,8 @@ public class MenuInterface : MonoBehaviour
 	  Application.Quit(); 
       Debug.Log("Game has been shut down");
     }
+
+// PAUSE ------------------------------------------------------
 
     public void PauseGame()
     {
