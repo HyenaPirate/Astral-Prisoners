@@ -22,8 +22,10 @@ public class Win : MonoBehaviour
             //menu.LoadMainMenu(); //po usunieciu wszystkich graczy wlancza sie menu
             FindObjectOfType<GameManager>().StopTime();
             FindObjectOfType<GameManager>().gameIsPaused = true;
+            if(FindObjectOfType<GameManager>().odblokowujeLevel != null) PlayerPrefs.SetInt(FindObjectOfType<GameManager>().odblokowujeLevel, 1);
+            FindObjectOfType<SaveManager>().Save();
             winScreen.SetActive(true);
-            FindObjectOfType<AudioManager>().Stop("MainMenuMusic");
+            FindObjectOfType<AudioManager>().Stop("Music");
             FindObjectOfType<AudioManager>().Play("Wygrana");
             ile_graczy = -1;
             FindObjectOfType<MovesCounter>().GetMoves();

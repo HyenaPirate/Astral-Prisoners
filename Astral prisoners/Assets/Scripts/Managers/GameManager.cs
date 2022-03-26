@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public bool gameIsPaused = true;
     public GameObject aktywnosc;
+    public string odblokowujeLevel; // Jezeli chcesz by przejscie poziomu odblokowalo jakis inny, tutaj piszesz PlayerPrefs tego poziomu
     
 
     //STATYSTYKI -----------------

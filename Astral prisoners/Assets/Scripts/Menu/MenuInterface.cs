@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 using System.IO;
 public class MenuInterface : MonoBehaviour
 {   
@@ -12,20 +13,20 @@ public class MenuInterface : MonoBehaviour
 
     void Start()
     {
-        Sound_Music();
+       Sound_Music();
     }
 
 // Scene Management -----------------------------------------
 
     public void LoadLevel(int lvl)
     {
-        if(loader == null){ SceneManager.LoadScene(lvl); Debug.Log("nie ma loadera");}
-        else{ loader.LoadLevel(lvl); Debug.Log("jest loader");}
+        if(loader == null){ SceneManager.LoadScene(lvl); /*Debug.Log("nie ma loadera");*/}
+        else{ loader.LoadLevel(lvl); /*Debug.Log("jest loader");*/}
     }
 
     public void LoadMainMenu()
     {
-        LoadLevel(0);
+        LoadLevel(1);
     }
 
     public void ReloadScene()
@@ -42,11 +43,12 @@ public class MenuInterface : MonoBehaviour
 
     public void QuitGame()
     {
-	  //saveManager.Save();
-	  //PlayerPrefs.DeleteAll();
+	  if(FindObjectOfType<SaveManager>() != null) FindObjectOfType<SaveManager>().Save();
+	  PlayerPrefs.DeleteAll();
 	  Application.Quit(); 
       Debug.Log("Game has been shut down");
     }
+
 
 // PAUSE ------------------------------------------------------
 
@@ -64,7 +66,7 @@ public class MenuInterface : MonoBehaviour
 
     public void Sound_Music()
     {
-        FindObjectOfType<AudioManager>().Play("MainMenuMusic");
+        FindObjectOfType<AudioManager>().Play("Music");
     }
 
     public void Sound_Select()
@@ -76,5 +78,6 @@ public class MenuInterface : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Return");
     }
+
 
 }

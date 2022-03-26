@@ -11,7 +11,7 @@ public class LevelLoader : MonoBehaviour
 	public Slider slider;
 	public Text progressText;
 	
-	public void LoadLevel (int sceneIndex) // To tutaj jesli chcesz zaladowac scene, np LoadLevel(0); bo 0 to menu
+	public void LoadLevel (int sceneIndex) // To tutaj jesli chcesz zaladowac scene, np LoadLevel(1); bo 1 to menu
 	{
 		StartCoroutine(LoadAsynchronously(sceneIndex));
 	}
