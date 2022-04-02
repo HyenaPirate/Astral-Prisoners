@@ -18,9 +18,14 @@ public class PreLoader : MonoBehaviour
     void Start()
     {
         saveManager.Load();
+        // Wlaczanie ustawien -----------------------
 
+        // AUDIO
         sliderMusic.value = PlayerPrefs.GetFloat("VolumeMusic", 0.8f);
         sliderEffects.value = PlayerPrefs.GetFloat("VolumeEffects", 0.8f);
+
+        // DISPLAY
+        Application.targetFrameRate = PlayerPrefs.GetInt("Framerate", 144);
 
         SceneManager.LoadScene(1);
     }

@@ -28,6 +28,7 @@ public class SaveManager : MonoBehaviour
 		  //Settings
 		  "" + PlayerPrefs.GetFloat("VolumeMusic", 0.8f),
 		  "" + PlayerPrefs.GetFloat("VolumeEffects", 0.8f),
+		  "" + PlayerPrefs.GetInt("Framerate", 60),
 		  
 		  //Levels
           "" + PlayerPrefs.GetInt("TutorialDemon", 0),
@@ -52,16 +53,17 @@ public class SaveManager : MonoBehaviour
 			string saveString = File.ReadAllText(Application.dataPath + "/save.txt");
 			string[] contents = saveString.Split(new[] { SAVE_SEPARATOR }, System.StringSplitOptions.None);
 
-            //Pamietaj ze [ta liczba] musi byc taka sama w jakiej kolejnosci wpisales tamto na gorze. Inaczej chuja zdzialasz tylko gre rozjebiesz
-			
-			
+            //Pamietaj ze [i] musi byc taka sama w jakiej kolejnosci wpisales tamto na gorze. Inaczej chuja zdzialasz tylko gre rozjebiesz
+			int i=0;
+
 			//Settings
-			PlayerPrefs.SetFloat("VolumeMusic", float.Parse(contents[0]));
-			PlayerPrefs.SetFloat("VolumeEffects", float.Parse(contents[1]));
+			PlayerPrefs.SetFloat("VolumeMusic", float.Parse(contents[i])); i++;
+			PlayerPrefs.SetFloat("VolumeEffects", float.Parse(contents[i])); i++;
+			PlayerPrefs.SetInt("Framerate", int.Parse(contents[i])); i++;
 
 			//Levels
-            PlayerPrefs.SetInt("TutorialDemon", int.Parse(contents[2]));
-            PlayerPrefs.SetInt("TutorialRobot", int.Parse(contents[3]));
+            PlayerPrefs.SetInt("TutorialDemon", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("TutorialRobot", int.Parse(contents[i])); i++;
 			
 			
 			Debug.Log("Progress Loaded");
