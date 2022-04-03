@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 340877725}
   - component: {fileID: 340877724}
   m_Layer: 5
-  m_Name: 8
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,7 +1640,7 @@ RectTransform:
   m_Children:
   - {fileID: 1943781314}
   m_Father: {fileID: 1168907266}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5010,7 +5010,7 @@ GameObject:
   - component: {fileID: 876668952}
   - component: {fileID: 876668951}
   m_Layer: 5
-  m_Name: 9
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5029,7 +5029,7 @@ RectTransform:
   m_Children:
   - {fileID: 1159534017}
   m_Father: {fileID: 1168907266}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6963,7 +6963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
   m_sharedMaterial: {fileID: -8065141336554102209, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
@@ -7353,9 +7353,9 @@ RectTransform:
   - {fileID: 1551518147}
   - {fileID: 577872407}
   - {fileID: 521736993}
-  - {fileID: 1707098349}
   - {fileID: 340877723}
   - {fileID: 876668950}
+  - {fileID: 1707098349}
   m_Father: {fileID: 695895267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8369,7 +8369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 9
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
   m_sharedMaterial: {fileID: -8065141336554102209, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
@@ -10024,7 +10024,7 @@ GameObject:
   - component: {fileID: 1707098351}
   - component: {fileID: 1707098350}
   m_Layer: 5
-  m_Name: 7
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10043,7 +10043,7 @@ RectTransform:
   m_Children:
   - {fileID: 1291803783}
   m_Father: {fileID: 1168907266}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11046,7 +11046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 8
+  m_text: 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
   m_sharedMaterial: {fileID: -8065141336554102209, guid: fa6abbc0b2632284d890b39135fa0b32, type: 2}
@@ -13084,9 +13084,9 @@ MonoBehaviour:
   tutorial_4: {fileID: 1551518146}
   tutorial_5: {fileID: 577872406}
   tutorial_6: {fileID: 521736992}
-  tutorial_7: {fileID: 1707098348}
-  tutorial_8: {fileID: 340877722}
-  tutorial_9: {fileID: 876668949}
+  tutorial_7: {fileID: 340877722}
+  tutorial_8: {fileID: 876668949}
+  tutorial_9: {fileID: 1707098348}
   stage_1: {fileID: 476201294}
 --- !u!224 &513705653509102314
 RectTransform:

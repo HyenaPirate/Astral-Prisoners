@@ -7977,7 +7977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameIsPaused: 0
   aktywnosc: {fileID: 541032457}
-  odblokowujeLevel: TutorialDemon
+  odblokowujeLevel: tutorial_9
   iloscRuchow: 0
   time: 0
 --- !u!4 &1376278311
