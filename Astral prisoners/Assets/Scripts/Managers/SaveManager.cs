@@ -30,9 +30,18 @@ public class SaveManager : MonoBehaviour
 		  "" + PlayerPrefs.GetFloat("VolumeEffects", 0.8f),
 		  "" + PlayerPrefs.GetInt("Framerate", 60),
 		  
+		  
 		  //Levels
-          "" + PlayerPrefs.GetInt("TutorialDemon", 0),
-          "" + PlayerPrefs.GetInt("TutorialRobot", 0),
+          "" + PlayerPrefs.GetInt("tutorial_2", 0),
+          "" + PlayerPrefs.GetInt("tutorial_3", 0),
+          "" + PlayerPrefs.GetInt("tutorial_4", 0),
+          "" + PlayerPrefs.GetInt("tutorial_5", 0),
+          "" + PlayerPrefs.GetInt("tutorial_6", 0),
+          "" + PlayerPrefs.GetInt("tutorial_7", 0),
+          "" + PlayerPrefs.GetInt("tutorial_8", 0),
+          "" + PlayerPrefs.GetInt("tutorial_9", 0),
+
+          "" + PlayerPrefs.GetInt("stage_1", 0),
 	    };
 	   
 	   
@@ -60,10 +69,19 @@ public class SaveManager : MonoBehaviour
 			PlayerPrefs.SetFloat("VolumeMusic", float.Parse(contents[i])); i++;
 			PlayerPrefs.SetFloat("VolumeEffects", float.Parse(contents[i])); i++;
 			PlayerPrefs.SetInt("Framerate", int.Parse(contents[i])); i++;
+			
 
 			//Levels
-            PlayerPrefs.SetInt("TutorialDemon", int.Parse(contents[i])); i++;
-            PlayerPrefs.SetInt("TutorialRobot", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_2", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_3", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_4", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_5", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_6", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_7", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_8", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("tutorial_9", int.Parse(contents[i])); i++;
+
+            PlayerPrefs.SetInt("stage_1", int.Parse(contents[i])); i++;
 			
 			
 			Debug.Log("Progress Loaded");

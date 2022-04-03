@@ -7,16 +7,15 @@ public class DisplaySettings : MonoBehaviour
 {
     public Toggle fullscreenToggle;
     public Toggle vsyncToggle;
-    public int framerate;
 
 
     Resolution[] resolutions;
 
     public TMPro.TMP_Dropdown resolutionDropdown;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Creating a list of avaible resolutions -------------
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
 
@@ -25,48 +24,57 @@ public class DisplaySettings : MonoBehaviour
         int currentResolutionIndex = 0;
         for(int i=0; i<resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate+"Hz";
-            //if(resolutions[i].refreshRate == rate) 
+            string option = resolutions[i].width + " x " + resolutions[i].height + " @ " + resolutions[i].refreshRate + " Hz";
             options.Add(option);
 
-            if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height) currentResolutionIndex = i;
+            // Setting the dropdown menu value to match applied settings
+            if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
+            {
+                if(PlayerPrefs.GetInt("Framerate", 60) == 0)
+                {
+                    if(resolutions[i].refreshRate == 60) currentResolutionIndex = i;
+                }
+                else if(resolutions[i].refreshRate == PlayerPrefs.GetInt("Framerate", 60)) currentResolutionIndex = i;
+            } 
+
         }
 
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        framerate = Application.targetFrameRate;
+        // Setting the toggles ----------------
         fullscreenToggle.isOn = Screen.fullScreen;
 
-        if(QualitySettings.vSyncCount == 0)
+        if(PlayerPrefs.GetInt("Framerate", 60) != 0)
         {
-            vsyncToggle.isOn = false;
+            vsyncToggle.isOn = true;
         }
-        else vsyncToggle.isOn = true;
+        else vsyncToggle.isOn = false;
     }
-
-    // Update is called once per frame
-
 
     public void ApplySettings()
     {
+        // RESOLUTION
         Resolution resolution = resolutions[resolutionDropdown.value];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 
         Screen.fullScreen = fullscreenToggle.isOn;
 
-        framerate = resolution.refreshRate;
 
+        // V-SYNC        
+        
 
         if(vsyncToggle.isOn)
         {
-            //QualitySettings.vSyncCount = 1;
-            Application.targetFrameRate = framerate;
-            PlayerPrefs.SetInt("Framerate", framerate);
+            Application.targetFrameRate = resolution.refreshRate;
+            PlayerPrefs.SetInt("Framerate", resolution.refreshRate);
         }
-        else Application.targetFrameRate = 0;
-        //QualitySettings.vSyncCount = 0;
+        else
+        {
+            Application.targetFrameRate = 0;
+            PlayerPrefs.SetInt("Framerate", 0);
+        }
 
     }
 }

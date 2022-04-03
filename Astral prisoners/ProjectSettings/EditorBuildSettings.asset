@@ -12,12 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9e20845bd87dd4a479fa597446a74068
   - enabled: 1
-    path: Assets/Scenes/Tutorial Cat.unity
-    guid: c9d9dfbc6caf3984d8e3e823960308e9
+    path: Assets/Scenes/Tutorials/Tutorial 1.unity
+    guid: 45ca656b9b3447447a3cf33afaf2664f
   - enabled: 1
-    path: Assets/Scenes/Tutorial Demon.unity
-    guid: 1006d7700fba6424784c397c63fbd502
+    path: Assets/Scenes/Tutorials/Tutorial 2.unity
+    guid: 723aa0de89178aa40916ca87c473ad3c
   - enabled: 1
-    path: Assets/Scenes/Tutorial Robot.unity
-    guid: beb35c2be49df304a8c5f741d81c657e
+    path: Assets/Scenes/Tutorials/Tutorial 3.unity
+    guid: f89d7867656135b4ca10d7faebd7b5c8
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 4.unity
+    guid: edbcb843c4013c4479c48981a58da6fa
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 5.unity
+    guid: 1e500cc1c474b8d46845e1b984022c0d
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 6.unity
+    guid: c9a9ece7a23fec54ead4b1c14bc7f852
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 7.unity
+    guid: 6f2c9d548da3eba4abebfc512320b302
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 8.unity
+    guid: 39f4537d539d9d145b74da980368aa61
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/Tutorial 9.unity
+    guid: 440bb9986620de4479795714c4189ee9
   m_configObjects: {}

@@ -16,14 +16,26 @@ public class MenuUnlocker : MonoBehaviour
 
     // Tutaj dajesz czym zarzadamy.
 
-    // SETTINGS
+    // SETTINGS -----------------------
 	public Slider sliderMusic;
 	public Slider sliderEffects;
 
 
-    // LEVELS
-    public GameObject tutorialDemon;
-    public GameObject tutorialRobot;
+    // LEVELS -------------------------
+
+    // Tutorials
+    //public GameObject[] tutorials;
+    public GameObject tutorial_2;
+    public GameObject tutorial_3;
+    public GameObject tutorial_4;
+    public GameObject tutorial_5;
+    public GameObject tutorial_6;
+    public GameObject tutorial_7;
+    public GameObject tutorial_8;
+    public GameObject tutorial_9;
+
+
+    public GameObject stage_1;
 
     void Start() // Tutaj ladujemy ustawienia i lockujemy odpowiednie poziomy
     {
@@ -31,9 +43,21 @@ public class MenuUnlocker : MonoBehaviour
         sliderEffects.value = PlayerPrefs.GetFloat("VolumeEffects", 0.8f);
 
 
-        // LEVELS
-        if(PlayerPrefs.GetInt("TutorialDemon") != 1) Lock(tutorialDemon);
-        if(PlayerPrefs.GetInt("TutorialRobot") != 1) Lock(tutorialRobot);
+        // LEVELS -----------------------
+
+        // tutorials
+        if(PlayerPrefs.GetInt("tutorial_2") != 1) Lock(tutorial_2);
+        if(PlayerPrefs.GetInt("tutorial_3") != 1) Lock(tutorial_3);
+        if(PlayerPrefs.GetInt("tutorial_4") != 1) Lock(tutorial_4);
+        if(PlayerPrefs.GetInt("tutorial_5") != 1) Lock(tutorial_5);
+        if(PlayerPrefs.GetInt("tutorial_6") != 1) Lock(tutorial_6);
+        if(PlayerPrefs.GetInt("tutorial_7") != 1) Lock(tutorial_7);
+        if(PlayerPrefs.GetInt("tutorial_8") != 1) Lock(tutorial_8);
+        if(PlayerPrefs.GetInt("tutorial_9") != 1) Lock(tutorial_9);
+
+        // stage I
+        if(PlayerPrefs.GetInt("stage_1") != 1) Lock(stage_1);
+        
 
 
     }
@@ -50,8 +74,17 @@ public class MenuUnlocker : MonoBehaviour
 
     public void DeleteProgress()
     {
-        PlayerPrefs.SetInt("TutorialDemon", 0);
-        PlayerPrefs.SetInt("TutorialRobot", 0);
+        PlayerPrefs.SetInt("tutorial_2", 0);
+        PlayerPrefs.SetInt("tutorial_3", 0);
+        PlayerPrefs.SetInt("tutorial_4", 0);
+        PlayerPrefs.SetInt("tutorial_5", 0);
+        PlayerPrefs.SetInt("tutorial_6", 0);
+        PlayerPrefs.SetInt("tutorial_7", 0);
+        PlayerPrefs.SetInt("tutorial_8", 0);
+        PlayerPrefs.SetInt("tutorial_9", 0);
+
+        PlayerPrefs.SetInt("stage_1", 0);
+        
         saveManager.Save();
     }
 

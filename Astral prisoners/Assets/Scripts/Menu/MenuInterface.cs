@@ -78,6 +78,4 @@ public class MenuInterface : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Return");
     }
-
-
 }

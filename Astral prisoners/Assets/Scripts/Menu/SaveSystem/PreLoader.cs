@@ -25,7 +25,10 @@ public class PreLoader : MonoBehaviour
         sliderEffects.value = PlayerPrefs.GetFloat("VolumeEffects", 0.8f);
 
         // DISPLAY
-        Application.targetFrameRate = PlayerPrefs.GetInt("Framerate", 144);
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = PlayerPrefs.GetInt("Framerate", 60);
+        if(PlayerPrefs.GetInt("Framerate", -69) == -69) PlayerPrefs.SetInt("Framerate", 60);
+        
 
         SceneManager.LoadScene(1);
     }
