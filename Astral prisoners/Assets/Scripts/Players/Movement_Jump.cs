@@ -7,7 +7,7 @@ public class Movement_Jump : MonoBehaviour
 {
     public Tilemap tilemap;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
-    void LateUpdate() //LateUpdate aby funkcja wykona�a si� po tym jak zwyk�y movement ju� si� wykona� i aby sobie nie przeszkadza�y
+    void LateUpdate() //LateUpdate aby funkcja wykonala sie po tym jak zwykly movement juz sie wykonal i aby sobie nie przeszkadza�y
     {
         if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())
         {
@@ -40,7 +40,7 @@ public class Movement_Jump : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                    if (tilemap.GetTile(GetComponent<Where>().Pole(1, 0)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(0, -2)).name.Substring(0, 3) == "Pdl")
+                    if (tilemap.GetTile(GetComponent<Where>().Pole(1, 0)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(2, 0)).name.Substring(0, 3) == "Pdl")
                     {
                         transform.position = GetComponent<Where>().Pole(2, 0) + korekta;
                         FindObjectOfType<AudioManager>().Play("Ruch");
