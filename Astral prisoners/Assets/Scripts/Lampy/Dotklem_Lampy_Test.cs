@@ -6,9 +6,12 @@ public class Dotklem_Lampy_Test : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponentInParent<Lampa>())
+        if (collision.transform.CompareTag("LampLight"))
         {
-            Debug.Log(collision.gameObject.GetComponentInParent<Transform>().parent.name);
+            if (collision.gameObject.GetComponentInParent<Lampa>())
+            {
+                Debug.Log(collision.gameObject.GetComponentInParent<Transform>().parent.name);
+            }
         }
     }
 }
