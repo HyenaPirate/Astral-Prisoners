@@ -10,7 +10,7 @@ public class Dotklem_Lampy_Test : MonoBehaviour
         {
             if (collision.gameObject.GetComponentInParent<Lampa>())
             {
-                Debug.Log(collision.gameObject.GetComponentInParent<Transform>().parent.name);
+                Debug.Log(collision.gameObject.GetComponentInParent<Transform>().parent.name +" - "+collision.gameObject.GetComponentInParent<Lampa>().rodzaj);
             }
         }
     }

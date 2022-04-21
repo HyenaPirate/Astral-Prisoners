@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 82455270}
   - component: {fileID: 82455266}
   - component: {fileID: 82455272}
+  - component: {fileID: 82455273}
   m_Layer: 0
   m_Name: Kot
   m_TagString: Player
@@ -290,6 +291,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1130539301}
+--- !u!114 &82455273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82455265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2869b99ef1053d14cbe2ba8e9cbf04d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &82455274
 Rigidbody2D:
   serializedVersion: 4
@@ -8757,13 +8770,33 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1803272774978802598, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
+      propertyPath: typ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803272774978802598, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
       propertyPath: grid
       value: 
       objectReference: {fileID: 1738750930}
     - target: {fileID: 1803272774978802598, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
+      propertyPath: rodzaj
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803272774978802598, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1130539301}
+    - target: {fileID: 1803272774978802599, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803272774978802599, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803272774978802599, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c6ab49a2c4f3c4dbde205caf17219f, type: 3}
 --- !u!1001 &2990137916123593406

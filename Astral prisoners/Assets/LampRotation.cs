@@ -14,6 +14,7 @@ public class LampRotation : MonoBehaviour
     {
         for(int i = 0; i < players.Length; i++)
         {
+            if(players[i] != null)
             if (players[i].GetComponent<Activate>().IsActive())
                 if (players[i].GetComponent<Collider2D>().bounds.Intersects(GetComponents<Collider2D>()[0].bounds) || players[i].GetComponent<Collider2D>().bounds.Intersects(GetComponents<Collider2D>()[1].bounds))
                     if(Input.GetKeyDown(KeyCode.Space))

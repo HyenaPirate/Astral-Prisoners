@@ -5,16 +5,25 @@ using UnityEngine.Tilemaps;
 
 public class Lampa : MonoBehaviour
 {
+    public enum Rodzaj{normal,red}; //Stworzenie enuma Rodzaj
+    public Rodzaj rodzaj = Rodzaj.normal; //zadeklarowanie zmiennej typu Rodzaj
     public GameObject prefab;
     public Grid grid;
     public Tilemap tilemap;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
     void Start()
-    {
+    {   
         GetComponent<Where>().Update(); //Kolejnosc wykonywania skryptow, psola to
+        this.Update();
         Swiatlo(1);
     }
-    
+    void Update() 
+    {
+        if(rodzaj == Rodzaj.normal)
+            transform.GetComponent<SpriteRenderer>().color = new Color(255, 255, 0);
+        if(rodzaj == Rodzaj.red)
+            transform.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+    }
     private void Swiatlo(int i) //Wywolywac funkcje tylko dla i=1
     {
         if (i == 1) //tylko w pierwszej iteracji skryptu
@@ -35,6 +44,7 @@ public class Lampa : MonoBehaviour
                     //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(0, i) + korekta;
+                    pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
                     Swiatlo(i + 1);
                     break;
             }
@@ -49,6 +59,7 @@ public class Lampa : MonoBehaviour
                     //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(-i, 0) + korekta;
+                    pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
                     Swiatlo(i + 1);
                     break;
             }
@@ -63,6 +74,7 @@ public class Lampa : MonoBehaviour
                     //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(0, -i) + korekta;
+                    pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
                     Swiatlo(i + 1);
                     break;
             }
@@ -77,6 +89,7 @@ public class Lampa : MonoBehaviour
                     //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(i, 0) + korekta;
+                    pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
                     Swiatlo(i + 1);
                     break;
             }
