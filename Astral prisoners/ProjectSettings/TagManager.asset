@@ -9,6 +9,7 @@ TagManager:
   - Hack
   - Timer
   - LampLight
+  - GameOverScreen
   layers:
   - Default
   - TransparentFX

@@ -59,7 +59,7 @@ public class MenuInterface : MonoBehaviour
 
     public void ResumeGame()
     {
-        FindObjectOfType<GameManager>().gameIsPaused = false;
+        if(FindObjectOfType<GameManager>().gameIsOver == false) FindObjectOfType<GameManager>().gameIsPaused = false;
     }
 
 // Audio ---------------------------------------------------

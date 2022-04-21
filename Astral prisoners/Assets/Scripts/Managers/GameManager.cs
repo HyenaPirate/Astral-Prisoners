@@ -7,6 +7,8 @@ using UnityEngine.Tilemaps;
 public class GameManager : MonoBehaviour
 {
     public bool gameIsPaused = true;
+    public bool gameIsOver = false;
+    GameObject gameOverScreen;
     public GameObject aktywnosc;
     public string odblokowujeLevel; // Jezeli chcesz by przejscie poziomu odblokowalo jakis inny, tutaj piszesz PlayerPrefs tego poziomu
     
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        gameOverScreen = GameObject.FindWithTag("GameOverScreen");
+        gameOverScreen.SetActive(false);
         gameIsPaused = false; //Odpauzowuje gre i pozwala graczowi na ruszanie postaciami, bo juz wszystko sie zaladowalo.
         StartTime();
     }
@@ -45,5 +49,14 @@ public class GameManager : MonoBehaviour
         {
             FindObjectOfType<MenuInterface>().ReloadScene();
         }
+    }
+
+    public void GameOver()
+    {
+        gameIsOver = true;
+        gameIsPaused = true;
+        gameOverScreen.SetActive(true);
+        FindObjectOfType<AudioManager>().Stop("Music");
+        FindObjectOfType<AudioManager>().Play("Przegrana");
     }
 }
