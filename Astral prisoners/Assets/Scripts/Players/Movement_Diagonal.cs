@@ -7,6 +7,12 @@ public class Movement_Diagonal : MonoBehaviour
 {
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
     public Tilemap tilemap;
+
+    void Start()
+    {
+        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
+    }
+    
     void Update()
     {
         if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())

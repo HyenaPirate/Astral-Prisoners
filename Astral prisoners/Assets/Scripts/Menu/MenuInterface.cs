@@ -10,9 +10,16 @@ public class MenuInterface : MonoBehaviour
     // Skrypt do zarzadzania interfacem menu, ladowaniem scen, pauzowaniem gry itp
 
     public LevelLoader loader;
+    public GameObject screensFolder;
 
+    void OnEnable()
+    {
+        if(screensFolder != null) screensFolder.SetActive(true); // Wlacza Folder ze Screenami, potrzebne by wszystko sie polaczylo, a pozwala wylaczyc go na czas testow i sie nie przejmowac
+    }
+    
     void Start()
     {
+       loader = FindObjectOfType<LevelLoader>();
        Sound_Music();
     }
 

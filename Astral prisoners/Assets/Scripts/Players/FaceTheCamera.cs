@@ -7,7 +7,7 @@ public class FaceTheCamera : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().flipX = true;
-        transform.position += new Vector3(0, .5f, 0);
+        transform.position += new Vector3(0, .3f, 0);
     }
 
     void Update() 

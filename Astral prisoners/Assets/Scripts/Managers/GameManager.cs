@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
         gameOverScreen = GameObject.FindWithTag("GameOverScreen");
         gameOverScreen.SetActive(false);
+        aktywnosc = GameObject.FindWithTag("ActiveSprite");
         gameIsPaused = false; //Odpauzowuje gre i pozwala graczowi na ruszanie postaciami, bo juz wszystko sie zaladowalo.
         StartTime();
     }

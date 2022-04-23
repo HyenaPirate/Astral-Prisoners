@@ -7,6 +7,12 @@ public class Movement_Jump : MonoBehaviour
 {
     public Tilemap tilemap;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
+
+    void Start()
+    {
+        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
+    }
+
     void LateUpdate() //LateUpdate aby funkcja wykonala sie po tym jak zwykly movement juz sie wykonal i aby sobie nie przeszkadza�y
     {
         if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())

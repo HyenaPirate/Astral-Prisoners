@@ -7,6 +7,12 @@ public class Movement : MonoBehaviour
 {
    public Tilemap tilemap;
    Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
+
+    void Start()
+    {
+        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
+    }
+
     void Update()
     {
         if(FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())

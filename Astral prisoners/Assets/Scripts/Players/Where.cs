@@ -8,6 +8,13 @@ public class Where : MonoBehaviour
     public Grid grid;
     public Tilemap tilemap;
     public Vector3Int pos;
+
+    void Start()
+    {
+        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
+        grid = GameObject.FindWithTag("Grid").GetComponent<Grid>();
+    }
+
     public void Update() //ustawia pos na wspolzdne tego obiektu na siatce
     {
         pos = grid.WorldToCell(transform.position);

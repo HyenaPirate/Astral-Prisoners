@@ -10,6 +10,9 @@ TagManager:
   - Timer
   - LampLight
   - GameOverScreen
+  - Grid
+  - Tilemap
+  - ActiveSprite
   layers:
   - Default
   - TransparentFX

@@ -19,4 +19,14 @@ public class SliderSave : MonoBehaviour
         GetComponent<Slider>().value = PlayerPrefs.GetFloat(prefs, 0.8f);
         //Debug.Log(PlayerPrefs.GetFloat(prefs, 69f));
     }
+
+    public void MusicVolume (float sliderValue)
+    {
+        FindObjectOfType<AudioManager>().musicMixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue)*20);
+    }
+
+    public void EffectsVolume (float sliderValue)
+    {
+        FindObjectOfType<AudioManager>().effectsMixer.SetFloat("EffectsVolume", Mathf.Log10(sliderValue)*20);
+    }
 }
