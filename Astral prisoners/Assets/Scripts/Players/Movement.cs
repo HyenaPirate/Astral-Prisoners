@@ -7,11 +7,21 @@ public class Movement : MonoBehaviour
 {
    public Tilemap tilemap;
    Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
+   //public bool wRuchu = false;
+   //public GameManager gameManager;
 
     void Start()
     {
+
         tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
+        //gameManager = FindObjectOfType<GameManager>();
     }
+
+    /*
+    IEnumerator CreateDelay(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }*/
 
     void Update()
     {
@@ -22,8 +32,12 @@ public class Movement : MonoBehaviour
                 if (tilemap.GetTile(GetComponent<Where>().Pole(0, 1)).name.Substring(0,3) == "Pdl")
                 {
                     transform.position = GetComponent<Where>().Pole(0, 1) + korekta;
+                    //wRuchu = true;
+                    //StartCoroutine(CreateDelay(2f));
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;
+                    
+                    //wRuchu = false;
                 }
             }
             if (Input.GetKeyDown(KeyCode.S))

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Music
-    clip: {fileID: 8300000, guid: 3f86b2ebf0e897642b8c62f2da5a6ecd, type: 3}
+    clip: {fileID: 8300000, guid: 30929282beb6d104b81e594eb22714ba, type: 3}
     mixer: {fileID: 24300002, guid: 757606d5e956d2c41ba5b1fe5670b6c2, type: 2}
     volume: 1
     pitch: 1
@@ -95,6 +95,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Przegrana
     clip: {fileID: 8300000, guid: 9d20ebb6d7723284aa2a5a2e2562d292, type: 3}
+    mixer: {fileID: 24300002, guid: 56e7640aad9788a46a0c958600a18f2d, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LampRotation
+    clip: {fileID: 8300000, guid: 276e84a7fb5203948a96c249eabc66ff, type: 3}
     mixer: {fileID: 24300002, guid: 56e7640aad9788a46a0c958600a18f2d, type: 2}
     volume: 0.5
     pitch: 1

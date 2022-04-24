@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorials/Tutorial 9.unity
     guid: cadafc846f9c77c49aa00845e7b3bd97
+  - enabled: 1
+    path: Assets/Scenes/Test 3D.unity
+    guid: 440bb9986620de4479795714c4189ee9
+  - enabled: 1
+    path: Assets/Scenes/TEST lamp.unity
+    guid: 42bf5c6c8c7115f47af15f924910897d
   m_configObjects: {}

@@ -41,7 +41,7 @@ public class Lampa : MonoBehaviour
             {
                 case "Pdl":
                 case "Dzr":
-                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
+                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casï¿½w
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(0, i) + korekta;
                     pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
@@ -56,7 +56,7 @@ public class Lampa : MonoBehaviour
             {
                 case "Pdl":
                 case "Dzr":
-                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
+                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casï¿½w
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(-i, 0) + korekta;
                     pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
@@ -71,7 +71,7 @@ public class Lampa : MonoBehaviour
             {
                 case "Pdl":
                 case "Dzr":
-                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
+                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casï¿½w
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(0, -i) + korekta;
                     pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
@@ -86,7 +86,7 @@ public class Lampa : MonoBehaviour
             {
                 case "Pdl":
                 case "Dzr":
-                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casów
+                    //Jakby lampy mialy swiecic przez wiecej rzeczy, dodaj wiecej casï¿½w
                     GameObject pre = Instantiate(prefab, transform);
                     pre.transform.position = GetComponent<Where>().Pole(i, 0) + korekta;
                     pre.transform.GetComponent<SpriteRenderer>().color = transform.GetComponent<SpriteRenderer>().color;
@@ -100,6 +100,7 @@ public class Lampa : MonoBehaviour
     {
         transform.Rotate(new Vector3Int(0,0,90));
         Swiatlo(1);
+        FindObjectOfType<AudioManager>().Play("LampRotation");
     }
 }
 

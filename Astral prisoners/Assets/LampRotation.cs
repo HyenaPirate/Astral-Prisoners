@@ -12,6 +12,7 @@ public class LampRotation : MonoBehaviour
     }
     private void Update()
     {
+        if(FindObjectOfType<GameManager>().gameIsPaused == true) return;
         for(int i = 0; i < players.Length; i++)
         {
             if(players[i] != null)

@@ -60,4 +60,14 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Music");
         FindObjectOfType<AudioManager>().Play("Przegrana");
     }
+
+    public void CreateDelay(float time)
+    {
+        StartCoroutine(CreateDelayCoroutine(time));
+    }
+
+    IEnumerator CreateDelayCoroutine(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
 }
