@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
                     transform.position = GetComponent<Where>().Pole(0, 1) + korekta;
                     //wRuchu = true;
                     //StartCoroutine(CreateDelay(2f));
+                    //GetComponent<Delayer>().CreateDelay(5f);
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;
                     
