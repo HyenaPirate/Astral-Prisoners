@@ -24,7 +24,7 @@ public abstract class Movement : MonoBehaviour
     abstract public void MoveCharacter();
     void Update()
     {
-        if(FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())
+        if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())
         {
             if (Input.GetKeyDown(KeyCode.W) && tilemap.GetTile(GetComponent<Where>().Pole(0, 1)).name.Substring(0, 3) == "Pdl")
             {
