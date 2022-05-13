@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Movement_Hack : MonoBehaviour
+public class Movement_Hack : Movement
 {
     private GameObject[] hackable;
-    private void Start()
+    new private void Awake() //przeci¹¿am awake() z klasy Movement
     {
+        base.Awake(); //uruchamiam bazowego awake()
         hackable = GameObject.FindGameObjectsWithTag("Hack");
-        
     }
-    void Update()
+    override public void MoveCharacter()
     {
-        if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())
-        {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 for(int i = 0; i < hackable.Length; i++)
@@ -27,6 +25,5 @@ public class Movement_Hack : MonoBehaviour
                     }
                 }
             }
-        }
     }
 }

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     GameObject gameOverScreen;
     public GameObject aktywnosc;
     public string odblokowujeLevel; // Jezeli chcesz by przejscie poziomu odblokowalo jakis inny, tutaj piszesz PlayerPrefs tego poziomu
-    
+    private int r_timer = 0;
 
     //STATYSTYKI -----------------
     public double iloscRuchow = 0;
@@ -46,9 +46,18 @@ public class GameManager : MonoBehaviour
             aktywnosc.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && gameIsPaused == false)
+        if (Input.GetKey(KeyCode.R) && gameIsPaused == false)
         {
-            FindObjectOfType<MenuInterface>().ReloadScene();
+            Debug.Log(r_timer);
+            r_timer++;
+            if (r_timer >= 180)
+            {
+                FindObjectOfType<MenuInterface>().ReloadScene();
+            }
+        }
+        else
+        {
+            r_timer = 0;
         }
     }
 

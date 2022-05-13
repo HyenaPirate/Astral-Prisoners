@@ -13,14 +13,15 @@ public class SaveManager : MonoBehaviour
 
 	private const string SAVE_SEPARATOR = "#saveseparationintensifies#";
 
-    public void Update()
+	//Duplikat z skryptu GameManager
+    /*public void Update()
     {
          if (Input.GetKeyDown(KeyCode.R))
         {
             FindObjectOfType<MenuInterface>().ReloadScene();
         }
     }
-
+	*/
 	public void Save()
 	{
 	   string[] contents = new string[] // tutaj wpisz wszystko co chcesz zapisac

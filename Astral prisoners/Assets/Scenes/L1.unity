@@ -275,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee55b646b476c3d40a275073e53abace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1130539301}
 --- !u!114 &82455272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3215,6 +3214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce38ebc7499ef145aa6d053bcf764d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
 --- !u!114 &592871039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,7 +3254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee55b646b476c3d40a275073e53abace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1130539301}
 --- !u!61 &592871042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4193,7 +4192,7 @@ GameObject:
   - component: {fileID: 1130539300}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Tilemap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9540,7 +9539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee55b646b476c3d40a275073e53abace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1130539301}
 --- !u!61 &1669771988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9725,7 +9723,7 @@ GameObject:
   - component: {fileID: 1738750932}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

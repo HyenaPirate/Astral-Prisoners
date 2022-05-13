@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Movement_Jump : MonoBehaviour
+public class Movement_Jump : Movement
 {
-    public Tilemap tilemap;
-    Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
-
-    void Start()
+    override public void MoveCharacter()
     {
-        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
-    }
-
-    void LateUpdate() //LateUpdate aby funkcja wykonala sie po tym jak zwykly movement juz sie wykonal i aby sobie nie przeszkadza�y
-    {
-        if (FindObjectOfType<GameManager>().gameIsPaused == false && GetComponent<Activate>().IsActive())
-        {
             if (Input.GetKeyDown(KeyCode.W))
             {
                 if (tilemap.GetTile(GetComponent<Where>().Pole(0, 1)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(0, 2)).name.Substring(0, 3) == "Pdl")
@@ -26,7 +16,7 @@ public class Movement_Jump : MonoBehaviour
                     FindObjectOfType<GameManager>().iloscRuchow++;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                     if (tilemap.GetTile(GetComponent<Where>().Pole(0, -1)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(0, -2)).name.Substring(0, 3) == "Pdl")
                     {
@@ -35,7 +25,7 @@ public class Movement_Jump : MonoBehaviour
                         FindObjectOfType<GameManager>().iloscRuchow++;
                     }
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.A))
             {
                     if (tilemap.GetTile(GetComponent<Where>().Pole(-1, 0)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(-2, 0)).name.Substring(0, 3) == "Pdl")
                     {
@@ -44,7 +34,7 @@ public class Movement_Jump : MonoBehaviour
                         FindObjectOfType<GameManager>().iloscRuchow++;
                     }
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D))
             {
                     if (tilemap.GetTile(GetComponent<Where>().Pole(1, 0)).name.Substring(0, 3) == "Dzr" && tilemap.GetTile(GetComponent<Where>().Pole(2, 0)).name.Substring(0, 3) == "Pdl")
                     {
@@ -54,5 +44,4 @@ public class Movement_Jump : MonoBehaviour
                     }
             }
         }
-    }
 }

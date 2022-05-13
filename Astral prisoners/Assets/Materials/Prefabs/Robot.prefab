@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1830836295997143888}
   - component: {fileID: 1830836295997143889}
   - component: {fileID: 1830836295997143890}
-  - component: {fileID: 1830836295997143891}
   - component: {fileID: 1830836295997143892}
   - component: {fileID: 1830836295997143893}
   - component: {fileID: 1830836295997143894}
@@ -104,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12, y: 15}
+    oldSize: {x: 0.8, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113,19 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.86281973, y: 0.8994012}
   m_EdgeRadius: 0
---- !u!114 &1830836295997143891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830836295997143895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee55b646b476c3d40a275073e53abace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
 --- !u!114 &1830836295997143892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce38ebc7499ef145aa6d053bcf764d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}

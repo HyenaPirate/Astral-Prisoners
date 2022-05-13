@@ -9,7 +9,7 @@ public class Where : MonoBehaviour
     public Tilemap tilemap;
     public Vector3Int pos;
 
-    void Start()
+    void Awake()
     {
         tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
         grid = GameObject.FindWithTag("Grid").GetComponent<Grid>();
