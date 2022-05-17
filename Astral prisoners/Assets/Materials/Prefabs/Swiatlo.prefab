@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6925723940829636928}
   - component: {fileID: 7726804856398047056}
   - component: {fileID: 7352811749851501457}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Swiatlo
   m_TagString: LampLight
   m_Icon: {fileID: 0}

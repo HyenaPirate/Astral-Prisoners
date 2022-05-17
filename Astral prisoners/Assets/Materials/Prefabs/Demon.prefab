@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3752482517686667246}
   - component: {fileID: 3752482517686667153}
   - component: {fileID: 3752482517686667152}
+  - component: {fileID: 713516555012323319}
   m_Layer: 0
   m_Name: Demon
   m_TagString: Player
@@ -136,8 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840ea7f60549b794fa09b4402b7f21d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  tilemap: {fileID: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!114 &3752482517686667152
 MonoBehaviour:
@@ -152,3 +151,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 0}
+--- !u!114 &713516555012323319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752482517686667155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2f2a3aeadffaf499ab34ff7ae3cc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead_by_normal: 1
+  dead_by_red: 0

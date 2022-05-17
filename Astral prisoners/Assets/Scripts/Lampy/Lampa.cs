@@ -8,12 +8,15 @@ public class Lampa : MonoBehaviour
     public enum Rodzaj{normal,red}; //Stworzenie enuma Rodzaj
     public Rodzaj rodzaj = Rodzaj.normal; //zadeklarowanie zmiennej typu Rodzaj
     public GameObject prefab;
-    public Grid grid;
-    public Tilemap tilemap;
+    private Grid grid;
+    private Tilemap tilemap;
+    private bool reLight = false;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
     void Start()
     {   
         GetComponent<Where>().Update(); //Kolejnosc wykonywania skryptow, psola to
+        tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
+        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
         this.Update();
         Swiatlo(1);
     }
@@ -23,6 +26,12 @@ public class Lampa : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().color = new Color(255, 255, 0);
         if(rodzaj == Rodzaj.red)
             transform.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+        if (reLight)
+        {
+            Swiatlo(1);
+            reLight = false;
+        }
+        
     }
     private void Swiatlo(int i) //Wywolywac funkcje tylko dla i=1
     {
@@ -101,6 +110,14 @@ public class Lampa : MonoBehaviour
         transform.Rotate(new Vector3Int(0,0,90));
         Swiatlo(1);
         FindObjectOfType<AudioManager>().Play("LampRotation");
+    }
+    public static void UpdateLight() //metoda statyczna, wywolaj ja jezeli chcesz aby swiatlo sie zaktualizowalo
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Lamp");
+        for(int i = 0; i < objects.Length; i++)
+        {
+            objects[i].GetComponent<Lampa>().reLight = true;
+        }
     }
 }
 

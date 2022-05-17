@@ -13,6 +13,7 @@ TagManager:
   - Grid
   - Tilemap
   - ActiveSprite
+  - Lamp
   layers:
   - Default
   - TransparentFX

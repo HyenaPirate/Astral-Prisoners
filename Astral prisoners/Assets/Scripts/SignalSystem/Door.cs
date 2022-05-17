@@ -7,10 +7,11 @@ public class Door : MonoBehaviour
 {
     private Signals signals;
     public int lock_id; //na jaki sygna³ maj¹ te drzwi reagowaæ
-    public Tilemap tilemap;
+    private Tilemap tilemap;
     public Tile tile; //na jaki tile ma siê zmieniæ to coœ pod drzwiami
-    private void Start()
+    private void Awake()
     {
+        tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         signals = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Signals>();
     }
 
@@ -20,6 +21,7 @@ public class Door : MonoBehaviour
         {
             tilemap.SetTile(GetComponent<Where>().pos,tile); //zmieniam tile pod drzwiami
             Destroy(gameObject); //zniszcz te drzwi
+            Lampa.UpdateLight();
         }
 
     }

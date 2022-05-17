@@ -4,26 +4,38 @@ using UnityEngine;
 
 
 /*
-Ta klasa s�u�y dodatkowo za przyk�ad jak u�y� klasy Hackable
-W przypadku kolejnych u�y� klasy hackable nie ma potrzeby tak dok�adnego komentowania
+Ta klasa sluzy dodatkowo za przyklad jak uzyc klasy Hackable
+W przypadku kolejnych uzyc klasy hackable nie ma potrzeby tak dokladnego komentowania
 */
-public class Przycisk : Hackable // <----- Dziedzicz� po hackable (Hackable dziedziczy po MonoBehaviour wi�c ta klasa te� z automatu i nie musz� tego pisa�)
+public class Przycisk : Hackable // <----- Dziedziczy po hackable (Hackable dziedziczy po MonoBehaviour wiec ta klasa tez z automatu i nie musze tego pisac)
 {
     private GameManager gameManager;
-    public int button_id; //kt�ry sygna� ma ustawia� ten przycisk
-    private void Start()
+    public int button_id; //ktory sygnal ma ustawiac ten przycisk
+    private SpriteRenderer spriteRenderer;
+    public Sprite on;
+    private Sprite off;
+    private void Awake()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        off = spriteRenderer.sprite ; //off to po prostu domyslny sprite przycisku
+    }
+    private void Update()
+    {
+        if (gameManager.GetComponent<Signals>().signal[button_id])
+            spriteRenderer.sprite = on;
+        else
+            spriteRenderer.sprite = off;
     }
     /*
-     Poniewa� klasa hackable jest abstrakcyjna trzeba zaimplementowa� metod� hack kiedy jej u�ywasz
-     Trzeba u�y� override przed
-     Kod zawarty w tej funkcji b�dzie u�yty przez robota gdy b�dzie hackowa� przedmiot kt�ry ma ten skrypt
+     Poniewaz klasa hackable jest abstrakcyjna trzeba zaimplementowac metode hack kiedy jej uzywasz
+     Trzeba uzyc override przed
+     Kod zawarty w tej funkcji bedzie uzyty przez robota gdy b�dzie hackowac przedmiot ktory ma ten skrypt
 
-     Pami�taj aby obiekt hackowalny mia� tag hack i by� postawiony r�wno na �rodku kratki
-     */ 
-    override public void Hack() //Implementuj� w�an� metod� hack
+     Pamietaj aby obiekt hackowalny mial tag hack i byc postawiony rowno na srodku kratki
+     */
+    override public void Hack() //Implementuje wlana metode hack
     {
-        gameManager.GetComponent<Signals>().signal[button_id] = true; //ustawiam sygna� o numerze button_id na prawdziwy
+        gameManager.GetComponent<Signals>().signal[button_id] = !gameManager.GetComponent<Signals>().signal[button_id]; //ustawiam sygnal o numerze button_id na prawdziwy
     }
 }

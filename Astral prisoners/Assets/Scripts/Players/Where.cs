@@ -5,14 +5,14 @@ using UnityEngine.Tilemaps;
 
 public class Where : MonoBehaviour
 {
-    public Grid grid;
-    public Tilemap tilemap;
+    private Grid grid;
+    private Tilemap tilemap;
     public Vector3Int pos;
 
     void Awake()
     {
-        tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
-        grid = GameObject.FindWithTag("Grid").GetComponent<Grid>();
+        tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
+        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
     }
 
     public void Update() //ustawia pos na wspolzdne tego obiektu na siatce

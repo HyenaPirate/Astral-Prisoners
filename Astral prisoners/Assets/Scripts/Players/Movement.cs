@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public abstract class Movement : MonoBehaviour
 {
-   public Tilemap tilemap;
+   protected Tilemap tilemap;
    protected Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
    //public bool wRuchu = false;
    //public GameManager gameManager;
