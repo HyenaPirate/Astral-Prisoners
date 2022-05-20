@@ -14,6 +14,7 @@ public class Beczki : MonoBehaviour
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("GameManager");
+        tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
     }
     void Awake()
     {
