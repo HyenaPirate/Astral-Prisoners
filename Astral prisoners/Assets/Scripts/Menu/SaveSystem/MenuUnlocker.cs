@@ -34,8 +34,11 @@ public class MenuUnlocker : MonoBehaviour
     public GameObject tutorial_8;
     public GameObject tutorial_9;
 
-
     public GameObject stage_1;
+    public GameObject l2;
+    public GameObject l3;
+
+    public GameObject tests;
 
     void Start() // Tutaj ladujemy ustawienia i lockujemy odpowiednie poziomy
     {
@@ -56,7 +59,11 @@ public class MenuUnlocker : MonoBehaviour
         if(PlayerPrefs.GetInt("tutorial_9") != 1) Lock(tutorial_9);
 
         // stage I
-        //if(PlayerPrefs.GetInt("stage_1") != 1) Lock(stage_1);
+        if(PlayerPrefs.GetInt("stage_1") != 1) Lock(stage_1);
+        if(PlayerPrefs.GetInt("l2") != 1) Lock(l2);
+        if(PlayerPrefs.GetInt("l3") != 1) Lock(l3);
+
+        if(PlayerPrefs.GetInt("tests") != 1) Lock(tests);
         
 
 
@@ -84,6 +91,30 @@ public class MenuUnlocker : MonoBehaviour
         PlayerPrefs.SetInt("tutorial_9", 0);
 
         PlayerPrefs.SetInt("stage_1", 0);
+        PlayerPrefs.SetInt("l2", 0);
+        PlayerPrefs.SetInt("l3", 0);
+
+        PlayerPrefs.SetInt("tests", 0);
+        
+        saveManager.Save();
+    }
+
+    public void UnlockAll()
+    {
+        PlayerPrefs.SetInt("tutorial_2", 1);
+        PlayerPrefs.SetInt("tutorial_3", 1);
+        PlayerPrefs.SetInt("tutorial_4", 1);
+        PlayerPrefs.SetInt("tutorial_5", 1);
+        PlayerPrefs.SetInt("tutorial_6", 1);
+        PlayerPrefs.SetInt("tutorial_7", 1);
+        PlayerPrefs.SetInt("tutorial_8", 1);
+        PlayerPrefs.SetInt("tutorial_9", 1);
+
+        PlayerPrefs.SetInt("stage_1", 1);
+        PlayerPrefs.SetInt("l2", 1);
+        PlayerPrefs.SetInt("l3", 1);
+
+        PlayerPrefs.SetInt("tests", 1);
         
         saveManager.Save();
     }

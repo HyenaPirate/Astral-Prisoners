@@ -12,6 +12,7 @@ public class Win : MonoBehaviour
     public GameObject winScreen;
     void Start()
     {
+        menu = FindObjectOfType<MenuInterface>();
         winScreen = GameObject.FindWithTag("WinScreen");
         winScreen.SetActive(false);
         ile_graczy = GameObject.FindGameObjectsWithTag("Player").Length; // na poczatku sprawdza ile jest graczy

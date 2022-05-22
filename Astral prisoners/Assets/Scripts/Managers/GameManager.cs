@@ -17,12 +17,11 @@ public class GameManager : MonoBehaviour
     public double iloscRuchow = 0;
 
     private float startTime;
-    private bool done = false; 
+    public bool done = false; 
     public float time;
     public void StartTime(){ startTime = Time.time; }
     public void StopTime(){ done = true; }
     
-
     public void Start()
     {
         gameOverScreen = GameObject.FindWithTag("GameOverScreen");

@@ -5,18 +5,29 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    // Skrypt pobiera czas z GameManagera i wpisuje go w wybrany tekst. Mozna zmienic by zawsze wpisywal w siebie bo wsumie to robi
-    // ale na razie trzeba go dawac recznie i nw jeszce jak to zrobic by dzialalo
+    // Skrypt pobiera czas z GameManagera i wpisuje go w tekst na tym samym GameObjecie.
     
     public Text timerText;
+    GameManager gm;
     
-
-    void Start()
+    public void Awake()
     {
-        float t = FindObjectOfType<GameManager>().time;
-        string minutes = ((int) t/60).ToString();
-        string seconds = (t%60).ToString("f3");
-
-        timerText.text = minutes+":"+seconds;
+        timerText = GetComponent<Text>();
+        gm = FindObjectOfType<GameManager>();
     }
+
+    
+    void Update()
+    {
+        if(gm.done)
+        {
+            float t = gm.time;
+            string minutes = ((int) t/60).ToString();
+            string seconds = (t%60).ToString("f3");
+            timerText.text = minutes+":"+seconds;
+        }
+
+        
+    }
+    
 }

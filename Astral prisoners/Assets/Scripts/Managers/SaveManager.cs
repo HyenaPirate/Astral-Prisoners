@@ -43,6 +43,10 @@ public class SaveManager : MonoBehaviour
           "" + PlayerPrefs.GetInt("tutorial_9", 0),
 
           "" + PlayerPrefs.GetInt("stage_1", 0),
+          "" + PlayerPrefs.GetInt("l2", 0),
+          "" + PlayerPrefs.GetInt("l3", 0),
+		  
+          "" + PlayerPrefs.GetInt("tests", 0),
 	    };
 	   
 	   
@@ -83,6 +87,10 @@ public class SaveManager : MonoBehaviour
             PlayerPrefs.SetInt("tutorial_9", int.Parse(contents[i])); i++;
 
             PlayerPrefs.SetInt("stage_1", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l2", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l3", int.Parse(contents[i])); i++;
+
+            PlayerPrefs.SetInt("tests", int.Parse(contents[i])); i++;
 			
 			
 			Debug.Log("Progress Loaded");

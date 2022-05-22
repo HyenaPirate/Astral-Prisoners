@@ -12,7 +12,7 @@ public class MenuInterface : MonoBehaviour
     public LevelLoader loader;
     public GameObject screensFolder;
 
-    void OnEnable()
+    void Awake()
     {
         if(screensFolder != null) screensFolder.SetActive(true); // Wlacza Folder ze Screenami, potrzebne by wszystko sie polaczylo, a pozwala wylaczyc go na czas testow i sie nie przejmowac
     }
