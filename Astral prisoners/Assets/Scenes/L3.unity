@@ -1840,6 +1840,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1894491143833637917, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 903d0baa9e8e05d4f918d0573113573d, type: 3}
+    - target: {fileID: 1894491143833637917, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 1894491143833637918, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -4471,7 +4479,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 2.8343e-41, g: 2.8343e-41, b: 2.8343e-41, a: 2.8343e-41}
   - m_RefCount: 1
-    m_Data: {r: 0.14779781, g: 0.8301887, b: 0.11486879, a: 1}
+    m_Data: {r: 0.17637746, g: 0.735849, b: 0.14346735, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4754,6 +4762,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3137183773405679494}
     m_Modifications:
+    - target: {fileID: 742110091180614700, guid: 8af926d9817d0e54ca6aa8a1ff1fb4d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2433356908044285369, guid: 8af926d9817d0e54ca6aa8a1ff1fb4d1, type: 3}
       propertyPath: m_Name
       value: Interface

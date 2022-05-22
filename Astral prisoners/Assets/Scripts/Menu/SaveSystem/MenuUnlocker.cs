@@ -56,7 +56,7 @@ public class MenuUnlocker : MonoBehaviour
         if(PlayerPrefs.GetInt("tutorial_9") != 1) Lock(tutorial_9);
 
         // stage I
-        if(PlayerPrefs.GetInt("stage_1") != 1) Lock(stage_1);
+        //if(PlayerPrefs.GetInt("stage_1") != 1) Lock(stage_1);
         
 
 

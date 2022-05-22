@@ -26,7 +26,7 @@ public class Win : MonoBehaviour
             if(FindObjectOfType<GameManager>().odblokowujeLevel != null) PlayerPrefs.SetInt(FindObjectOfType<GameManager>().odblokowujeLevel, 1);
             FindObjectOfType<SaveManager>().Save();
             winScreen.SetActive(true);
-            FindObjectOfType<AudioManager>().Stop("Music");
+            //FindObjectOfType<AudioManager>().Stop("Music");
             FindObjectOfType<AudioManager>().Play("Wygrana");
             ile_graczy = -1;
             FindObjectOfType<MovesCounter>().GetMoves();

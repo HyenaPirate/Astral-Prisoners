@@ -12,6 +12,7 @@ public class Movement_Diagonal : Movement
             {
                 if (tilemap.GetTile(GetComponent<Where>().Pole(-1, 1)).name.Substring(0, 3) == "Pdl")
                 {
+                    animator.Play("Teleport1");
                     transform.position = GetComponent<Where>().Pole(-1, 1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;
@@ -21,6 +22,7 @@ public class Movement_Diagonal : Movement
             {
                 if (tilemap.GetTile(GetComponent<Where>().Pole(1, 1)).name.Substring(0, 3) == "Pdl")
                 {
+                    animator.Play("Teleport1");
                     transform.position = GetComponent<Where>().Pole(1, 1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;
@@ -30,6 +32,7 @@ public class Movement_Diagonal : Movement
             {
                 if (tilemap.GetTile(GetComponent<Where>().Pole(-1, -1)).name.Substring(0, 3) == "Pdl")
                 {
+                    animator.Play("Teleport1");
                     transform.position = GetComponent<Where>().Pole(-1, -1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;
@@ -39,6 +42,7 @@ public class Movement_Diagonal : Movement
             {
                 if (tilemap.GetTile(GetComponent<Where>().Pole(1, -1)).name.Substring(0, 3) == "Pdl")
                 {
+                    animator.Play("Teleport1");
                     transform.position = GetComponent<Where>().Pole(1, -1) + korekta;
                     FindObjectOfType<AudioManager>().Play("Ruch");
                     FindObjectOfType<GameManager>().iloscRuchow++;

@@ -7332,7 +7332,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 1.1712e-41, g: 1.1712e-41, b: 1.1712e-41, a: 1.1712e-41}
   - m_RefCount: 1
-    m_Data: {r: 0.14779781, g: 0.8301887, b: 0.11486879, a: 1}
+    m_Data: {r: 0.17637746, g: 0.735849, b: 0.14346735, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7449,6 +7449,10 @@ PrefabInstance:
     - target: {fileID: 470266644025187832, guid: 0d57138bff480db4aa90cdc7ef4e17ff, type: 3}
       propertyPath: m_Name
       value: Active_sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 470266644025187834, guid: 0d57138bff480db4aa90cdc7ef4e17ff, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5254902
       objectReference: {fileID: 0}
     - target: {fileID: 470266644025187835, guid: 0d57138bff480db4aa90cdc7ef4e17ff, type: 3}
       propertyPath: m_RootOrder
@@ -7987,6 +7991,11 @@ MonoBehaviour:
   gracze: []
   menu: {fileID: 0}
   winScreen: {fileID: 0}
+--- !u!95 &1892345384 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7124025718336462477, guid: ada2a86aaed35d7498db597c18155646, type: 3}
+  m_PrefabInstance: {fileID: 3752482517972949422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1892990664
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,6 +8603,10 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1130539301}
+    - target: {fileID: 3752482517686667152, guid: ada2a86aaed35d7498db597c18155646, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1892345384}
     - target: {fileID: 3752482517686667153, guid: ada2a86aaed35d7498db597c18155646, type: 3}
       propertyPath: grid
       value: 

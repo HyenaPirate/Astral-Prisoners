@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3936212572630127674}
   - component: {fileID: 3936212572630127664}
   - component: {fileID: 4161773625240197038}
+  - component: {fileID: 5338986950823537799}
   m_Layer: 0
   m_Name: Kot
   m_TagString: Player
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802d2d68071157a478686c10a2f90733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
+  animator: {fileID: 5338986950823537799}
 --- !u!114 &4161773625240197038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead_by_normal: 0
   dead_by_red: 1
+--- !u!95 &5338986950823537799
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936212572630127673}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0798067dbdc42294490e0c3531b137cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

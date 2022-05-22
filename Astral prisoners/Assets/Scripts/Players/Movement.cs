@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public abstract class Movement : MonoBehaviour
 {
+   public Animator animator;
+
    protected Tilemap tilemap;
    protected Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
    //public bool wRuchu = false;
@@ -12,6 +14,7 @@ public abstract class Movement : MonoBehaviour
 
     protected void Awake()
     {
+        animator = GetComponent<Animator>();
         tilemap = GameObject.FindWithTag("Tilemap").GetComponent<Tilemap>();
         //gameManager = FindObjectOfType<GameManager>();
     }
@@ -28,6 +31,7 @@ public abstract class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) && tilemap.GetTile(GetComponent<Where>().Pole(0, 1)).name.Substring(0, 3) == "Pdl")
             {
+                animator.Play("Move1");
                 transform.position = GetComponent<Where>().Pole(0, 1) + korekta;
                 //wRuchu = true;
                 //StartCoroutine(CreateDelay(2f));
@@ -38,18 +42,21 @@ public abstract class Movement : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.S) && tilemap.GetTile(GetComponent<Where>().Pole(0, -1)).name.Substring(0, 3) == "Pdl")
             {
+                animator.Play("Move1");
                 transform.position = GetComponent<Where>().Pole(0, -1) + korekta;
                 FindObjectOfType<AudioManager>().Play("Ruch");
                 FindObjectOfType<GameManager>().iloscRuchow++;
             }
             else if (Input.GetKeyDown(KeyCode.A) && tilemap.GetTile(GetComponent<Where>().Pole(-1, 0)).name.Substring(0, 3) == "Pdl")
             {
+                animator.Play("Move1");
                 transform.position = GetComponent<Where>().Pole(-1, 0) + korekta;
                 FindObjectOfType<AudioManager>().Play("Ruch");
                 FindObjectOfType<GameManager>().iloscRuchow++;
             }
             else if (Input.GetKeyDown(KeyCode.D) && tilemap.GetTile(GetComponent<Where>().Pole(1, 0)).name.Substring(0, 3) == "Pdl")
             {
+                animator.Play("Move1");
                 transform.position = GetComponent<Where>().Pole(1, 0) + korekta;
                 FindObjectOfType<AudioManager>().Play("Ruch");
                 FindObjectOfType<GameManager>().iloscRuchow++;
