@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(r_timer);
             r_timer++;
-            if (r_timer >= 180)
+            if (r_timer >= 90)
             {
                 FindObjectOfType<MenuInterface>().ReloadScene();
             }

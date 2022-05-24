@@ -20,6 +20,7 @@ public class Door_closable : MonoBehaviour
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         signals = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Signals>();
         spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        transform.GetComponent<SpriteRenderer>().color = ColorScheme.GetColor(lock_id);
         off = spriteRenderer.sprite;
     }
 

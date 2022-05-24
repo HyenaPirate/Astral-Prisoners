@@ -23,9 +23,9 @@ public class Lampa : MonoBehaviour
     void Update() 
     {
         if(rodzaj == Rodzaj.normal)
-            transform.GetComponent<SpriteRenderer>().color = new Color(255, 255, 0);
+            transform.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
         if(rodzaj == Rodzaj.red)
-            transform.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+            transform.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
         if (reLight)
         {
             Swiatlo(1);

@@ -18,6 +18,7 @@ public class Przycisk : Hackable // <----- Dziedziczy po hackable (Hackable dzie
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        transform.GetComponent<SpriteRenderer>().color = ColorScheme.GetColor(button_id);
         off = spriteRenderer.sprite ; //off to po prostu domyslny sprite przycisku
     }
     private void Update()

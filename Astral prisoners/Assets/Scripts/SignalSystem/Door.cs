@@ -13,6 +13,7 @@ public class Door : MonoBehaviour
     {
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         signals = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Signals>();
+        transform.GetComponent<SpriteRenderer>().color = ColorScheme.GetColor(lock_id);
     }
 
     void Update()
