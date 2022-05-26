@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+
 public class MenuInterface : MonoBehaviour
 {   
     // Skrypt do zarzadzania interfacem menu, ladowaniem scen, pauzowaniem gry itp
@@ -54,6 +57,35 @@ public class MenuInterface : MonoBehaviour
 	  PlayerPrefs.DeleteAll();
 	  Application.Quit(); 
       Debug.Log("Game has been shut down");
+    }
+
+// LANGUAGE -----------------------------------------------
+
+public void ChangeLanguage(int language)
+{
+    switch(language)
+    {
+        case 0: LoadLocale("en"); break; //english
+        case 1: LoadLocale("pl"); break; //polish
+       
+        default: break;
+    }
+    PlayerPrefs.SetInt("Language", language);
+}
+
+private void LoadLocale(string languageIdentifier)
+    {
+        LocalizationSettings settings = LocalizationSettings.Instance;
+        LocaleIdentifier localeCode = new LocaleIdentifier(languageIdentifier);  //can be "en" "de" "ja" etc.
+        for(int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; i++)
+        {
+            Locale aLocale = LocalizationSettings.AvailableLocales.Locales[i];
+            LocaleIdentifier anIdentifier = aLocale.Identifier;
+            if(anIdentifier == localeCode)
+            {
+                LocalizationSettings.SelectedLocale = aLocale;
+            }
+        }
     }
 
 

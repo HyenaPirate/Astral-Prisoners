@@ -27,6 +27,8 @@ public class SaveManager : MonoBehaviour
 	   string[] contents = new string[] // tutaj wpisz wszystko co chcesz zapisac
 	    {
 		  //Settings
+		  "" + PlayerPrefs.GetInt("Language", 0),
+
 		  "" + PlayerPrefs.GetFloat("VolumeMusic", 0.8f),
 		  "" + PlayerPrefs.GetFloat("VolumeEffects", 0.8f),
 		  "" + PlayerPrefs.GetInt("Framerate", 60),
@@ -71,6 +73,8 @@ public class SaveManager : MonoBehaviour
 			int i=0;
 
 			//Settings
+			PlayerPrefs.SetInt("Language", int.Parse(contents[i])); i++;
+
 			PlayerPrefs.SetFloat("VolumeMusic", float.Parse(contents[i])); i++;
 			PlayerPrefs.SetFloat("VolumeEffects", float.Parse(contents[i])); i++;
 			PlayerPrefs.SetInt("Framerate", int.Parse(contents[i])); i++;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class PreLoader : MonoBehaviour
 {
@@ -17,8 +19,18 @@ public class PreLoader : MonoBehaviour
 	public Slider sliderEffects;
     void Start()
     {
+        LoadLocale("en");
+
         saveManager.Load();
         // Wlaczanie ustawien -----------------------
+
+        switch(PlayerPrefs.GetInt("Language", 0))
+        {
+        case 0: LoadLocale("en"); break; //english
+        case 1: LoadLocale("pl"); break; //polish
+       
+        default: break;
+        }
 
         // AUDIO
         sliderMusic.value = PlayerPrefs.GetFloat("VolumeMusic", 0.8f);
@@ -31,6 +43,22 @@ public class PreLoader : MonoBehaviour
         
 
         SceneManager.LoadScene(1);
+
+    }
+
+    private void LoadLocale(string languageIdentifier)
+    {
+        LocalizationSettings settings = LocalizationSettings.Instance;
+        LocaleIdentifier localeCode = new LocaleIdentifier(languageIdentifier);  //can be "en" "de" "ja" etc.
+        for(int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; i++)
+        {
+            Locale aLocale = LocalizationSettings.AvailableLocales.Locales[i];
+            LocaleIdentifier anIdentifier = aLocale.Identifier;
+            if(anIdentifier == localeCode)
+            {
+                LocalizationSettings.SelectedLocale = aLocale;
+            }
+        }
     }
 
 }
