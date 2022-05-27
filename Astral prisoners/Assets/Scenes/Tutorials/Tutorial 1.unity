@@ -2149,6 +2149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1894491143833637917, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
+      propertyPath: sceneType
+      value: Tutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 1894491143833637918, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -5993,6 +5997,7 @@ MonoBehaviour:
   aktywnosc: {fileID: 1597077417}
   odblokowujeLevel: tutorial_2
   iloscRuchow: 0
+  done: 0
   time: 0
 --- !u!4 &1376278311
 Transform:

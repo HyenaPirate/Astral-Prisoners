@@ -1841,6 +1841,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1894491143833637917, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
+      propertyPath: sceneType
+      value: Stage I
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894491143833637917, guid: c787880d9d0bf954ebd6bae35a1c4db0, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: 903d0baa9e8e05d4f918d0573113573d, type: 3}
@@ -5561,6 +5565,7 @@ MonoBehaviour:
   aktywnosc: {fileID: 434881999}
   odblokowujeLevel: tests
   iloscRuchow: 0
+  done: 0
   time: 0
 --- !u!4 &1376278311
 Transform:
