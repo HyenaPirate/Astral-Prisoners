@@ -6,7 +6,9 @@ using UnityEngine.Tilemaps;
 public class Lampa : MonoBehaviour
 {
     public enum Rodzaj{normal,red}; //Stworzenie enuma Rodzaj
+    public enum Kierunek {clockwise,anticlockwise }
     public Rodzaj rodzaj = Rodzaj.normal; //zadeklarowanie zmiennej typu Rodzaj
+    public Kierunek kierunek = Kierunek.anticlockwise;
     public GameObject prefab;
     private Grid grid;
     private Tilemap tilemap;
@@ -26,6 +28,11 @@ public class Lampa : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
         if(rodzaj == Rodzaj.red)
             transform.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+        if (kierunek == Kierunek.clockwise)
+            transform.GetComponent<SpriteRenderer>().flipX = false;
+        if (kierunek == Kierunek.anticlockwise)
+            transform.GetComponent<SpriteRenderer>().flipX = true;
+
         if (reLight)
         {
             Swiatlo(1);
@@ -107,7 +114,10 @@ public class Lampa : MonoBehaviour
 
     public void RotateLamp()
     {
-        transform.Rotate(new Vector3Int(0,0,90));
+        if (kierunek == Kierunek.clockwise)
+            transform.Rotate(new Vector3Int(0, 0, -90));
+        else
+            transform.Rotate(new Vector3(0, 0, 90));
         Swiatlo(1);
         FindObjectOfType<AudioManager>().Play("LampRotation");
     }
