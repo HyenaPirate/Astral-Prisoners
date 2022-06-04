@@ -51,14 +51,65 @@ EditorBuildSettings:
     path: Assets/Scenes/Testy nowych poziomow/TEST 1.unity
     guid: c12cadaf7bf30a04285e5e5b14b95200
   - enabled: 1
-    path: Assets/Scenes/L1.unity
+    path: Assets/Scenes/Stage I/L1.unity
     guid: 69079d868ad391c488e7d878570f0c57
   - enabled: 1
-    path: Assets/Scenes/L2.unity
+    path: Assets/Scenes/Stage I/L2.unity
     guid: 991ce47962820f242bf44702a4968e2f
   - enabled: 1
-    path: Assets/Scenes/L3.unity
+    path: Assets/Scenes/Stage I/L3.unity
     guid: 250bb465434a8e2468eb3add90df9f70
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L4.unity
+    guid: 7b6be86da79f4f5448dad090506b0514
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L5.unity
+    guid: 9a8197dd0701942438067b235966402b
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L6.unity
+    guid: 8e9974168dda6f846bc3e5820abeeaf4
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L7.unity
+    guid: c9c4a01eff492b246900985e262622b6
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L8.unity
+    guid: 9cfd0015f43d91c4398fc338f1f0d357
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L9.unity
+    guid: 622bc8202d58bcd469cb340263c1772b
+  - enabled: 1
+    path: Assets/Scenes/Stage I/L10.unity
+    guid: 11d28b4b0857b3f40a2ddc86d6e13968
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K1.unity
+    guid: 5b2a1d4104220d6448014fb619b73c74
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K2.unity
+    guid: 6c317344a6d0e064eaa272b6c029878a
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K3.unity
+    guid: f975deadefcdea747b0634a707c73276
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K4.unity
+    guid: 6b3335ff36f8bd34d83f5a47bb897086
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K5.unity
+    guid: 10316fac6c0dbdd4c8be06ca7c305a34
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K6.unity
+    guid: 73efe85440d43bf4fa3c6af7da56b9c9
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K7.unity
+    guid: 5440c133fbb7a33458ec01dd3bce5274
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K8.unity
+    guid: 107dee56fcb7fff4997b65bbb77866ce
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K9.unity
+    guid: 080debf82f0b2d643b3350b1dee4d0a7
+  - enabled: 1
+    path: Assets/Scenes/Stage II/K10.unity
+    guid: b059e05a30725ad4191856d574719a38
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 7d65ed6939c3a644b871766607feb8b3, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 458f36e7394be5646bfc1a893ff761b1, type: 2}

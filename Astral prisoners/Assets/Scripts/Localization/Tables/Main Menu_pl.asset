@@ -114,5 +114,9 @@ MonoBehaviour:
     m_Localized: Test Kolory
     m_Metadata:
       m_Items: []
+  - m_Id: 3142939130306560
+    m_Localized: Etap II
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

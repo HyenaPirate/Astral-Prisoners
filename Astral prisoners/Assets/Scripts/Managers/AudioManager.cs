@@ -7,18 +7,20 @@ public class AudioManager : MonoBehaviour
 // Creating Audio Database ------------------------------
 
     // zmienna ktora ustala czy zachowac ten sam AudioManager pomiedzy scenami
-    public string sceneType;
+    //public string sceneType;
 
     public Sound[] sounds;
 
-    public static AudioManager instance; 
+    //public static AudioManager instance; 
 
+    
     public void Awake()
     {
+        
         // Jezeli masz zmienic AudioManagera
-        if(instance == null || instance.sceneType != this.sceneType) instance = this;
+        //if(instance == null || instance.sceneType != this.sceneType) instance = this;
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     
         foreach(Sound s in sounds)
         {
@@ -29,14 +31,16 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-        CheckInstance();
+        //CheckInstance();
     }
 
+    /*
     public bool CheckInstance() // Funkcja sprawdza czy ten konkretny AudioManager ma sie usunac czy zostac
     {
         if(instance != this) Destroy(gameObject);
         return true;
     }
+    */
 
 
 // Play Functions -------------------------------------

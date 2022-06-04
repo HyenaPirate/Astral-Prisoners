@@ -47,6 +47,24 @@ public class SaveManager : MonoBehaviour
           "" + PlayerPrefs.GetInt("stage_1", 0),
           "" + PlayerPrefs.GetInt("l2", 0),
           "" + PlayerPrefs.GetInt("l3", 0),
+          "" + PlayerPrefs.GetInt("l4", 0),
+          "" + PlayerPrefs.GetInt("l5", 0),
+          "" + PlayerPrefs.GetInt("l6", 0),
+          "" + PlayerPrefs.GetInt("l7", 0),
+          "" + PlayerPrefs.GetInt("l8", 0),
+          "" + PlayerPrefs.GetInt("l9", 0),
+          "" + PlayerPrefs.GetInt("l10", 0),
+
+          "" + PlayerPrefs.GetInt("stage_2", 0),
+          "" + PlayerPrefs.GetInt("k2", 0),
+          "" + PlayerPrefs.GetInt("k3", 0),
+          "" + PlayerPrefs.GetInt("k4", 0),
+          "" + PlayerPrefs.GetInt("k5", 0),
+          "" + PlayerPrefs.GetInt("k6", 0),
+          "" + PlayerPrefs.GetInt("k7", 0),
+          "" + PlayerPrefs.GetInt("k8", 0),
+          "" + PlayerPrefs.GetInt("k9", 0),
+          "" + PlayerPrefs.GetInt("k10", 0),
 		  
           "" + PlayerPrefs.GetInt("tests", 0),
 	    };
@@ -93,6 +111,24 @@ public class SaveManager : MonoBehaviour
             PlayerPrefs.SetInt("stage_1", int.Parse(contents[i])); i++;
             PlayerPrefs.SetInt("l2", int.Parse(contents[i])); i++;
             PlayerPrefs.SetInt("l3", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l4", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l5", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l6", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l7", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l8", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l9", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("l10", int.Parse(contents[i])); i++;
+
+            PlayerPrefs.SetInt("stage_2", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k2", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k3", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k4", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k5", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k6", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k7", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k8", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k9", int.Parse(contents[i])); i++;
+            PlayerPrefs.SetInt("k10", int.Parse(contents[i])); i++;
 
             PlayerPrefs.SetInt("tests", int.Parse(contents[i])); i++;
 			

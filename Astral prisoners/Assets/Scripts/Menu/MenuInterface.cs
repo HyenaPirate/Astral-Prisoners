@@ -20,8 +20,8 @@ public class MenuInterface : MonoBehaviour
         if(screensFolder != null) screensFolder.SetActive(true); // Wlacza Folder ze Screenami, potrzebne by wszystko sie polaczylo, a pozwala wylaczyc go na czas testow i sie nie przejmowac
 
         // Dla kazdego AudioManagera niech on sprawdzi czy ma sie usunac
-        AudioManager[] am = (AudioManager[]) GameObject.FindObjectsOfType (typeof(AudioManager));
-        foreach (AudioManager manager in am) manager.CheckInstance();
+       // AudioManager[] am = (AudioManager[]) GameObject.FindObjectsOfType (typeof(AudioManager));
+        //foreach (AudioManager manager in am) manager.CheckInstance();
 
 
         loader = FindObjectOfType<LevelLoader>();
