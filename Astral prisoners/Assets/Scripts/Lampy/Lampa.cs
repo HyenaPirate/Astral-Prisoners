@@ -14,7 +14,7 @@ public class Lampa : MonoBehaviour
     private Tilemap tilemap;
     private bool reLight = false;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
-    void Start()
+    void Awake()
     {   
         GetComponent<Where>().Update(); //Kolejnosc wykonywania skryptow, psola to
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
