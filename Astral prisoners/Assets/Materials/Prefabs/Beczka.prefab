@@ -18,6 +18,10 @@ GameObject:
   - component: {fileID: 7320536532374202696}
   - component: {fileID: 4232529612692117666}
   - component: {fileID: 683782811843108464}
+  - component: {fileID: 4409612820123739582}
+  - component: {fileID: -1495465878366668545}
+  - component: {fileID: 6870772756489383586}
+  - component: {fileID: 9138972165288606401}
   m_Layer: 0
   m_Name: Beczka
   m_TagString: Beczka
@@ -269,4 +273,108 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.85333335, y: 0.85333335}
+  m_EdgeRadius: 0
+--- !u!61 &4409612820123739582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334013489018891104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0.015037594, y: 0.015037594, z: 0.015037594, w: 0.015037594}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96240604, y: 0.96240604}
+    newSize: {x: 0.85333335, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96240604, y: 0.96240604}
+  m_EdgeRadius: 0
+--- !u!61 &-1495465878366668545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334013489018891104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0.015037594, y: 0.015037594, z: 0.015037594, w: 0.015037594}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96240604, y: 0.96240604}
+    newSize: {x: 0.85333335, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96240604, y: 0.96240604}
+  m_EdgeRadius: 0
+--- !u!61 &6870772756489383586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334013489018891104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1, y: -1}
+  m_SpriteTilingProperty:
+    border: {x: 0.015037594, y: 0.015037594, z: 0.015037594, w: 0.015037594}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96240604, y: 0.96240604}
+    newSize: {x: 0.85333335, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96240604, y: 0.96240604}
+  m_EdgeRadius: 0
+--- !u!61 &9138972165288606401
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334013489018891104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: -1}
+  m_SpriteTilingProperty:
+    border: {x: 0.015037594, y: 0.015037594, z: 0.015037594, w: 0.015037594}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96240604, y: 0.96240604}
+    newSize: {x: 0.85333335, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96240604, y: 0.96240604}
   m_EdgeRadius: 0
