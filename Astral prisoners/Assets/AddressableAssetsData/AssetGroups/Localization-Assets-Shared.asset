@@ -25,6 +25,14 @@ MonoBehaviour:
     m_Address: Assets/Scripts/Localization/Tables/Preloader Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 4fcf9d7ec4ec1cb489b96e08db7e7c57
+    m_Address: Assets/Scripts/Localization/Tables/Intructions Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: cf7703aca0663de42985cbda3f919a35
+    m_Address: Assets/Scripts/Localization/Tables/Ingame Menu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 21c0ec45164bbc643a84470fb78ed9ef, type: 2}
   m_SchemaSet:

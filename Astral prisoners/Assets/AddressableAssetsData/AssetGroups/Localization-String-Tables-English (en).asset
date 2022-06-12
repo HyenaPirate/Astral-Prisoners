@@ -29,6 +29,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
+  - m_GUID: bb6883beae813634eaaafdf61dd3fff3
+    m_Address: Intructions_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+  - m_GUID: ba0a780f535694b4183fefd14e17deee
+    m_Address: Ingame Menu_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 21c0ec45164bbc643a84470fb78ed9ef, type: 2}
   m_SchemaSet:

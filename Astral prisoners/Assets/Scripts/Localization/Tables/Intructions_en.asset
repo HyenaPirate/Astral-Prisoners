@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Intructions_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4fcf9d7ec4ec1cb489b96e08db7e7c57, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22148653056
+    m_Localized: 'Click on a character to steer it. Your objective is to reach the
+      exit.
+
+
+      Movement - WASD     Switch grid overlay - G      Restart level
+      - R'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 527960743936
+    m_Localized: Cat can jump over one-wide holes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1468004933632
+    m_Localized: Your goal is to reach the exit with all characters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1980628574208
+    m_Localized: 'Demon can move diagonally.
+
+      For that, use the QEZC keys.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2845598916608
+    m_Localized: All of the characters must reach the exit!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3136356458496
+    m_Localized: 'Robot can interact with control panels.
+
+      To use a panel,
+      press SPACE.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3748682899456
+    m_Localized: 'Don touch da lampy, coz ded
+
+      U can turn it w/ SPOOCE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4703168077824
+    m_Localized: "                                   When pushed into a hole, a barrel\n       
+      becomes a floor.\n\n               Reset level - R (hold)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5722266509312
+    m_Localized: 'Lamps emit light, that kill specific characters.
+
+      A lamp
+      can be rotated from up to 1 block away with SPACE'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

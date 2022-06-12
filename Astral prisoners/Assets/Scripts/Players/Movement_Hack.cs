@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class Movement_Hack : Movement
 {
     private GameObject[] hackable;
-    new private void Awake() //przeci¹¿am awake() z klasy Movement
+    new private void Awake() //przeciï¿½ï¿½am awake() z klasy Movement
     {
         base.Awake(); //uruchamiam bazowego awake()
         hackable = GameObject.FindGameObjectsWithTag("Hack");
@@ -21,6 +21,7 @@ public class Movement_Hack : Movement
                     {
                         hackable[i].GetComponent<Hackable>().Hack();
                         FindObjectOfType<AudioManager>().Play("Hack");
+                        animator.Play("Hack1");
                         FindObjectOfType<GameManager>().iloscRuchow++;
                     }
                 }

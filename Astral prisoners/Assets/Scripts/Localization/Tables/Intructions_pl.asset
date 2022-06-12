@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Intructions_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: 4fcf9d7ec4ec1cb489b96e08db7e7c57, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22148653056
+    m_Localized: "Kliknij na posta\u0107 aby ni\u0105 sterowa\u0107. Twoim zadaniem
+      jest doj\u015Bcie do wyj\u015Bcia.\n\nPoruszanie - WSAD     Prze\u0142\u0105cz
+      siatk\u0119 - G      Zresetuj poziom - R"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 527960743936
+    m_Localized: "Kot mo\u017Ce przeskakiwa\u0107 pojedyncze dziury!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1468004933632
+    m_Localized: "Celem gry jest doprowadzenie do wyj\u015Bcia wszystkich postaci."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1980628574208
+    m_Localized: "Demon potrafi porusza\u0107 si\u0119 po skosie.\nMo\u017Cesz to
+      zrobi\u0107 za pomoc\u0105 klawiszy QEZC."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2845598916608
+    m_Localized: "Wszystkie postaci musz\u0105 doj\u015B\u0107 do wyj\u015Bcia!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3136356458496
+    m_Localized: "Robot mo\u017Ce wchodzi\u0107 w interakcje z panelami dost\u0119pu.\nAby
+      u\u017Cy\u0107 panelu wci\u015Bnij SPACJ\u0118."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3748682899456
+    m_Localized: "Ni dotknij \u015Bwiat\u0142a lampy bo zgon\nMo\u017Cesz jum obroco\u0107
+      SPACJOM"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4703168077824
+    m_Localized: "                                 Po wepchni\u0119ciu beczki do
+      dziury\n                  stanie si\u0119 one pod\u0142og\u0105.\n\n                                 
+      Zresetuj poziom - R (przytrzymaj)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5722266509312
+    m_Localized: "Lampy tworz\u0105 promienie, kt\xF3re zabijaj\u0105 poszczeg\xF3lne
+      postaci.\nMo\u017Cesz obr\xF3ca\u0107 lamp\u0119 do 1 bloku dalej za pomoc\u0105
+      SPACJI."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
