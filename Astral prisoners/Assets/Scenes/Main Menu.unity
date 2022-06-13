@@ -23688,8 +23688,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 513705652495467517}
+        m_TargetAssemblyTypeName: SliderSave, Assembly-CSharp
         m_MethodName: MusicVolume
         m_Mode: 0
         m_Arguments:
@@ -23998,8 +23998,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 513705652692924892}
+        m_TargetAssemblyTypeName: SliderSave, Assembly-CSharp
         m_MethodName: EffectsVolume
         m_Mode: 0
         m_Arguments:
