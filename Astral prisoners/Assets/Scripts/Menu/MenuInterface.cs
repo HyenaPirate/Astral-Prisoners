@@ -25,6 +25,13 @@ public class MenuInterface : MonoBehaviour
 
 
         loader = FindObjectOfType<LevelLoader>();
+        switch(PlayerPrefs.GetInt("Language", 0))
+        {
+        case 0: LoadLocale("en"); Debug.Log("Language set to English"); break; //english
+        case 1: LoadLocale("pl"); Debug.Log("Language set to Polish"); break; //polish
+       
+        default: break;
+        }
     }
     
     void Start()

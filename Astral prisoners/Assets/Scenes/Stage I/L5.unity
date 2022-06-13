@@ -4240,7 +4240,7 @@ MonoBehaviour:
   gameIsPaused: 0
   gameIsOver: 0
   aktywnosc: {fileID: 937599036}
-  odblokowujeLevel: l4
+  odblokowujeLevel: l6
   iloscRuchow: 0
   done: 0
   time: 0

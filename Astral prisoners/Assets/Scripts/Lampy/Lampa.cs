@@ -14,13 +14,20 @@ public class Lampa : MonoBehaviour
     private Tilemap tilemap;
     private bool reLight = false;
     Vector3 korekta = new Vector3(0.5f, 0.5f, 0);
-    void Awake()
+    void Start()
     {   
-        GetComponent<Where>().Update(); //Kolejnosc wykonywania skryptow, psola to
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
-        this.Update();
-        Swiatlo(1);
+        //pod tym przepisz Update():
+         if(rodzaj == Rodzaj.normal)
+            transform.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+        if(rodzaj == Rodzaj.red)
+            transform.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+        if (kierunek == Kierunek.clockwise)
+            transform.GetComponent<SpriteRenderer>().flipX = false;
+        if (kierunek == Kierunek.anticlockwise)
+            transform.GetComponent<SpriteRenderer>().flipX = true;
+        Swiatlo();
     }
     void Update() 
     {
@@ -35,15 +42,16 @@ public class Lampa : MonoBehaviour
 
         if (reLight)
         {
-            Swiatlo(1);
+            Swiatlo();
             reLight = false;
         }
         
     }
-    private void Swiatlo(int i) //Wywolywac funkcje tylko dla i=1
+    private void Swiatlo(int i = 1) //Wywolywac funkcje tylko dla i=1
     {
         if (i == 1) //tylko w pierwszej iteracji skryptu
         {
+            Debug.Log(name + " " + GetComponent<Where>().Pole(0,0));
             //zabija wszystkie dzieci lampy
             foreach (Transform child in transform)
             {

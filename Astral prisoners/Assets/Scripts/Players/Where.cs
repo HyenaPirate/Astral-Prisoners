@@ -13,6 +13,9 @@ public class Where : MonoBehaviour
     {
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        
+        //pod tym przepisz Update()
+        pos = grid.WorldToCell(transform.position);
     }
 
     public void Update() //ustawia pos na wspolzdne tego obiektu na siatce

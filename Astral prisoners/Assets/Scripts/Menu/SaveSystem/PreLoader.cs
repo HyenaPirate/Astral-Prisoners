@@ -17,17 +17,36 @@ public class PreLoader : MonoBehaviour
     public SaveManager saveManager;
     public Slider sliderMusic;
 	public Slider sliderEffects;
+
+    public void Awake()
+    {
+        LocalizationSettings settings = LocalizationSettings.Instance;
+        LocaleIdentifier localeCode = new LocaleIdentifier("en");  //can be "en" "de" "ja" etc.
+        Debug.Log("localeCode made " + LocalizationSettings.AvailableLocales.Locales.Count);
+        for(int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; i++)
+        {
+            Locale aLocale = LocalizationSettings.AvailableLocales.Locales[i];
+            LocaleIdentifier anIdentifier = aLocale.Identifier;
+            if(anIdentifier == localeCode)
+            {
+                LocalizationSettings.SelectedLocale = aLocale;
+                Debug.Log("if statement completed, " +  LocalizationSettings.SelectedLocale);
+            }
+        }
+        Debug.Log("Finished Locale");
+    }
+
     void Start()
     {
-        LoadLocale("en");
+        
 
         saveManager.Load();
         // Wlaczanie ustawien -----------------------
 
         switch(PlayerPrefs.GetInt("Language", 0))
         {
-        case 0: LoadLocale("en"); break; //english
-        case 1: LoadLocale("pl"); break; //polish
+        case 0: LoadLocale("en"); Debug.Log("Language set to English"); break; //english
+        case 1: LoadLocale("pl"); Debug.Log("Language set to Polish"); break; //polish
        
         default: break;
         }
@@ -44,12 +63,15 @@ public class PreLoader : MonoBehaviour
 
         SceneManager.LoadScene(1);
 
+        Debug.Log(PlayerPrefs.GetInt("Language", 69));
+
     }
 
-    private void LoadLocale(string languageIdentifier)
+public void LoadLocale(string languageIdentifier)
     {
         LocalizationSettings settings = LocalizationSettings.Instance;
         LocaleIdentifier localeCode = new LocaleIdentifier(languageIdentifier);  //can be "en" "de" "ja" etc.
+        Debug.Log("localeCode made " + LocalizationSettings.AvailableLocales.Locales.Count);
         for(int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; i++)
         {
             Locale aLocale = LocalizationSettings.AvailableLocales.Locales[i];
@@ -57,8 +79,10 @@ public class PreLoader : MonoBehaviour
             if(anIdentifier == localeCode)
             {
                 LocalizationSettings.SelectedLocale = aLocale;
+                Debug.Log("if statement completed, " +  LocalizationSettings.SelectedLocale);
             }
         }
+        Debug.Log("Finished Locale");
     }
 
 }
